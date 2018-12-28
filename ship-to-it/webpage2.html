@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<style>
+#body{
+
+  padding:40px;
+  background-color: #d3d3d3;
+
+}
+body{
+background-color: #d3d3d3;
+
+
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(70,130,180);
+}
+
+li {
+  
+  float:left;
+
+}
+li a{
+display: block;
+  color: white;
+  text-align: center;
+  padding: 35px 16px 40px 30px;
+  text-decoration: none;
+  font-family: Arial;
+
+
+}
+/*#header{
+  width: 100%;
+background-color: rgb(100,160,200);
+padding: 20px;
+height: 40px;
+
+
+}
+*/
+#myInput {
+  
+  width: 83%;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+table {
+  display: table;
+  align-self: center;
+  border-spacing: 3px;
+  border-color: gray;
+  background-color: rgb(250,255,255);
+  border-collapse: collapse;
+  width: 85%;
+
+font-family: Arial;
+}
+td{
+  border: 1px solid #d3d3d3;
+  text-align: left;
+  padding: 8px;
+  height: 25px;
+  width: 5px;
+
+}
+thead>tr:nth-child(1){
+  background-color: #87ceeb;
+  font-size: 15px;
+  color:white;
+  font-family: Arial;
+
+
+
+}
+thead>tr>:nth-child(n){
+border-collapse: separate;
+/*border:1px solid white;*/
+
+}
+
+th{
+  text-align: left;
+  padding: 8px;
+  height: 30px;
+
+}
+tfoot>tr>:nth-child(3){
+background-color: rgb(200,210,200);
+
+}
+</style>
+
+</head>
+<body>
+  <div id="header">
+    <ul>
+  <li><a href="#home"> &#9830; SHIP TO IT &#9830;</a></li>
+  <li><a href="#news"><font color="#1e90ff">ACTION LIST</font></a></li>
+  <li><a href="#contact">PROFILES</a></li>
+  <li><a href="#about">SETTINGS</a></li>
+</ul>
+
+  </div>
+<div id="body">
+<center>
+  <input type="text" id="myInput" placeholder="search the company" title="Type in a name">
+<br>
+<br>
+<table>
+<thead>
+  <tr>
+    <th>COMPANY NAME</th>
+    <th>NUMBER OF ITEMS TO SHIP</th>
+    <th>NEXT ACTION</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Adam's Greenworks</td>
+    <td>14</td>
+    <td>Package items</td>
+  </tr>
+  <tr>
+    <td>Davie's Burgers</td>
+    <td>2</td>
+    <td>Send Invoice</td>
+  </tr>
+  <tr>
+    <td>Baker's Bike Shop</td>
+    <td>3</td>
+    <td>Send Invoice</td>
+  </tr>
+  <tr>
+    <td>Miss Sally's Southern</td>
+    <td>4</td>
+    <td>Ship</td>
+  </tr>
+  <tr>
+    <td>Summit Resort Rentals</td>
+    <td>4</td>
+    <td>Ship</td>
+  </tr>
+  <tr>
+    <td>Strike Fitness</td>
+    <td>1</td>
+    <td>Enter Order</td>
+  </tr>
+</tbody>
+<tfoot>
+  <tr>
+    <td>Total</td>
+    <td>28</td>
+    <td></td>
+  </tr>
+</tfoot>
+</table>
+</center>
+</div>
+</body>
+</html>
