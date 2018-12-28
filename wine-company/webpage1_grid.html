@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 { 
+  background-color: white;
+  font-weight: bold;
+  font-family: Oswald;
+  font-size: 190%;
+  padding: 17px;
+  letter-spacing: -2px;
+  color: rgb(150,100,60);
+  }
+body{
+   background-color: rgb(50,60,85);
+}
+h2{
+   font-family: Oswald;
+  font-size: 190%;
+
+   color: white;
+}
+#footer {
+   
+   bottom:0;
+   width:100%;
+   height:35px;   /* Height of the footer */
+   padding: 17px;
+   background-color:rgb(50,60,85);
+   color: white;
+   font-family: Oswald;
+  font-size: 190%;
+  position:fixed;
+}
+
+.grid-container {
+  display: grid;
+  padding:5px;
+   grid-row-gap: 3px;
+   grid-column-gap: 3px;
+  justify-content: center;
+  grid-template-areas:'header header'
+                      'grid-item grid-item'
+                      'grid-item grid-item'
+                       'grid-item grid-item'
+                       'grid-item grid-item'
+                       'grid-item grid-item';
+  grid-template-columns: auto auto;
+  grid-template-rows:150px 150px 150px 150px 150px;
+   text-align: center;
+    font-size: 190%;
+    visibility: visible;
+   
+   }
+.item1 { grid-area: header;
+      border: 2px solid rgb(210,140,50);
+    font-size: 80%;
+
+  /*padding: 50px;*/
+    /*font-family: Oswald;
+  background-color: white;
+  color: rgb(150,100,60);
+  font-weight: bold;
+  text-align: center;
+*/
+   }
+.grid-item {
+   border: 2px solid rgb(210,140,50);
+  padding: 40px;
+  font-family: Oswald;
+  color: white;
+  visibility: visible;
+
+}
+
+</style>
+</head>
+<body>
+    <h1><center>Annual Aguillar Family Wine Festival</center></h1>
+   
+    <center>
+      
+  <div class="grid-container">
+
+  <div class="item1"><h1>Wine Festival Schedule</h1></div>
+  <div class="grid-item"><b>TIME</b></div>
+  <div class="grid-item"><b>EVENT</b></div>
+  <div class="grid-item">12:00 PM</div>  
+  <div class="grid-item">WELCOME RECEPTION</div>
+  <div class="grid-item">01:00 PM</div>
+  <div class="grid-item">STORYTELLING & TASTING</div>  
+  <div class="grid-item">02:00 PM</div>
+  <div class="grid-item">WINE LUNCHEON</div>
+  <div class="grid-item">03:00 PM</div>
+  <div class="grid-item">AGUILLAR FAMILY WINES</div>   
+</div>
+<br>
+<div id="footer">CONTACT  &nbsp; &nbsp; LOCATION  &nbsp; &nbsp; PRIVACY POLICY</div>
+ </center>
+   
+
+</body>
+</html>
