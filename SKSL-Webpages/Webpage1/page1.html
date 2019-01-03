@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Arial">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;
+}
+/* Column container */
+.header {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+  background-color: white;
+  padding: 30px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: white;
+  padding: 30px;
+}
+
+/* Fake image, just for this example */
+
+
+/*added**********/
+.footer {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.rightside {
+  -ms-flex: 60%; /* IE10 */
+  flex: 60%;
+  background-color: white;
+  padding: 30px;
+}
+
+/* Main column */
+.leftside {   
+  -ms-flex: 40%; /* IE10 */
+  flex: 40%;
+  background-color: white;
+  padding: 30px;
+}
+.headerimg {
+  width: 80%;
+  padding: 30px;
+   background-image: url("top.jpg");
+   height: 450px
+}
+.img1 {
+  position: relative;
+  top: 150px;
+  right: 5px;
+  height:300px;
+  width: 45%;
+  background-color: #f5deb3;
+  border-radius: 50%;
+  z-index: 1;
+}
+.img2 {
+  right: 200px;
+  position: absolute;
+  z-index: 2;
+  height: 300px;
+  width: 25%;
+
+}
+
+.img3 {
+  position: relative;
+  top: 170px;
+  left: 60px;
+  z-index: 3;
+   height: 250px;
+   width: 30%;
+   filter:contrast(40%);
+}
+.img4 {
+  position: absolute;
+  z-index: 4;
+  height: 300px;
+   width: 20%;
+   bottom:-600px;
+   right:450px; 
+}
+.img5 {
+
+  position: relative;
+  height:200px;
+  width: 20%;
+  background-color: #eedd82;
+  border-radius: 50%;
+  opacity: 0.6;
+  z-index: 5;
+  right: 290px;
+  bottom:-400px;
+}
+
+img {
+  border-radius: 50%;
+}
+
+hr{
+  border: 5px solid #ffd700;
+}
+p{
+  font-family: Arial;
+  font-size: 20px;
+}
+h1{
+  font-family: Arial;
+  font-size: 30px;
+
+}
+h2{
+  font-family: Roboto;
+  font-size: 23px;
+}
+
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+ @media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="side">
+ <div class="headerimg"></div>
+    </div>
+  <div class="main">
+    <hr align="left" width="20%">
+    <h1><b>ABOUT THE COMPANY</b></h1>
+    <p>S.K Samanta & Co.Pvt.Ltd. is an infrastructural based company that has diversified into steel-sector by setting up an automated TNT bar mill at Bilaspur,Chhattisgarh state and is currently lokking to expand the firm's operations by delving into the new emerging markets of e-commerce.</p>
+    <h2>Mission</h2>
+    <p>SKSL aims at executing turnkey multidisciplinary projects with total customer satisfaction amidst innovatiove engineering and quality management acumen within the stipulated time frame. The quest fro excellence is a continuous one, and SKSL with its team of dedicated individuals cohere to the mantra of quality,collective,involvement work as a team in each project.</p>
+    <p>The DET NORSE VERITAS, a reputable instituition has awarded management certificate to S.K.Samanta & Co.(P) Ltd., and we strive to be an innovative company committed to delivering excellence in all areas of our business.
+    <p style="font-size:14px;" align="right"><b>SKSL&nbsp;|&nbsp;2020</b></p>
+  </div>
+</div>
+<br>
+<div class="footer">
+ 
+  <div class="leftside">
+    <hr align="left" width="30%">
+    <h1><b>ABOUT THE COMPANY</b></h1>
+    <h2>Vision</h2>
+  
+    <p>Irrespective of the size and difficulty of the project,SKSL has the expertise,experience, and financial stability to respond promptly with the optimum solution,execute safely and see the project through to a successful conclusion. </p>
+    <p>Our vision is to thus,lead in delivering high-value projects for our clients,with excellent quality and effective cost management.</p>
+  </div>
+   <div class="rightside">
+    <img class="img1">
+    <img  class="img2" src="image2.jpg">
+    <img class="img3" src="image3.jpg">
+    <img class="img4" src="image4.jpg">
+    <img class="img5">
+    </div>
+    
+</div>
+<p style="font-size:14px;position : relative;right: 20px ;bottom: -220px;" align="right"><b>SKSL&nbsp;|&nbsp;2020</b></p>
+</body>
+</html>
