@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Burgers Page</title>
+<meta charset="UTF-8">
+<link href="style.css" type="text/css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<center>
+<div class="container" style="background-color: #f0fff0;width: 85%;height: 650px;border-radius: 50px;">
+	<div class="header">
+	<h1>DAVIE'S BURGERS</h1>
+	</div>
+	<hr class="upperline" style="color:3px solid #bebebe;width: 99.5%;">
+	<div class="body">
+	<form onsubmit="alert('form successfully submitted!');return false">
+	<h2><b>Create a burger!</b></h2>
+ 	<p>What type of protein would you like?&nbsp; <input type="text"></p>
+  	<hr>
+  	<p>How many patties would you like? &nbsp;<input type="number" min="0"></p>
+  	<hr>
+  	<p>How do you want your patty cooked</p>
+  	<p>Rare<input type="range">Well-Done</p>
+  	<hr>
+  	<p>What toppings would you like?
+  	<br>
+    <input type="checkbox" value="Lettuce" > Lettuce &nbsp; &nbsp;
+ 	<input type="checkbox" value="Tomato">Tomato &nbsp; &nbsp;
+  	<input type="checkbox" value="Onion"> Onion &nbsp; &nbsp;
+  	<p>
+  	<hr>
+  	<p>Would you like to add cheese?
+  	<br>
+  	<input type="radio" name="selection" value="Yes" > Yes &nbsp; &nbsp;
+ 	<input type="radio" name="selection" value="No">No &nbsp; &nbsp;
+ 	</p>
+  	<hr> 
+  	<p>What type of bun would you like?&nbsp;
+  	<select>
+  	<option value="sesame">sesame</option>
+  	<option value="multigrain">multigrain</option>
+  	<option value="abc">abc</option>
+  	<option value="xyz">xyz</option>
+  	<option value="pqr">pqr</option>
+	</select>
+  	</p>
+  	<hr>
+  	<p>What type of sauce would you like? &nbsp; <input type="text"></p>
+  	<hr>
+  	<p>Anything else you want to add?</p>
+  	<textarea rows="2" cols="30">
+	</textarea>
+  	<hr>
+  	 <input type="submit" value="Submit">
+	</form>
+	</div>
+</div>      
+
+</center>
+</body>
+</html>

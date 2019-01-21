@@ -1,0 +1,28 @@
+
+body
+{
+	background:#1e90ff;
+}
+hr{
+	color:1px solid #bebebe;
+	width: 150px;
+	font-family: Roboto;
+
+}
+h1{
+	color:#4682b4;
+	padding-top: 15px;
+	padding-left: 50px;
+	font-family: Roboto;
+	font-size: 30px;
+}
+h2{
+
+	font-family: Roboto;
+	font-size: 20px;
+}
+p{
+	font-family: Roboto;
+	font-size: 12px;
+	font-weight: bold;
+}
