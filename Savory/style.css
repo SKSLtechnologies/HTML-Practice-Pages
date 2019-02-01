@@ -1,0 +1,153 @@
+
+/* body{
+    width: 100%;
+    height: 100%;
+    
+} */
+
+.heading{
+    width: 100%; 
+    /* border:solid yellow; */
+}
+h1{
+     margin:-10px; 
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 15px;
+	color: white;
+	font-size: 25px;
+	font-family: Arial;
+    text-align: center;
+    background-color: rgb(247, 150, 23);
+
+}
+h3{
+    margin-left: -15px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 15px;
+	color: white;
+	font-size: 25px;
+	font-family: Arial;
+    text-align: center;
+    background-color: rgb(247, 150, 23);
+
+}
+.footer{
+  
+    width: 100%;
+    /* border:solid yellow; */
+}
+.body_container{
+    top:50px;
+    width: 100%;
+    /* height:100%; */
+    position: absolute;
+    margin: 0px;
+    /* border:2px solid green; */
+
+}
+.grid_container{
+
+    top:40px;
+    /* border: 2px solid black; */
+    position: relative;
+    width: 35%;
+    height:100%;
+    /* background-color: yellow; */
+    grid-template-columns: auto auto;
+    column-gap: normal;
+    grid-row-gap: 15px;
+    display: grid;
+
+}
+.grid-item {
+    /* border: 2px solid rgb(133, 219, 253); */
+    height: 350px;
+    width:60%;
+    box-shadow: 0px 0px 0.1px grey;
+
+  }
+
+  .image1{
+      background-image: url("img1.jpg");
+      background-repeat: no repeat;
+      background-size: cover;
+    height:130px;
+    /* border:1px solid black; */
+    
+  }
+  .image2{
+    background-image: url("img2.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+    height:130px;
+  /* border:1px solid black; */
+  
+}
+.image3{
+    background-image: url("img3.jfif");
+    background-repeat: no repeat;
+    background-size: cover;
+    height:130px;
+    /* border:1px solid black; */
+  
+}
+.image4{
+    background-image: url("img4.jpg");
+    background-repeat: no repeat;
+    background-size: cover;
+    height:130px;
+  /* border:1px solid black; */
+  
+}
+.image5{
+    background-image: url("img5.jfif");
+    background-repeat: no repeat;
+    background-size: cover;
+    height:130px;
+  /* border:1px solid black; */
+  
+}
+.image6{
+    background-image: url("img6.jfif");
+    background-repeat: no repeat;
+    background-size: cover;
+    height:130px;
+  /* border:1px solid black; */
+  
+}
+  .text{
+    height:100px;
+    /* border:1px solid black; */
+    
+  }
+
+  .para{
+    
+    height:90px;
+    /* border:1px solid black; */
+  }
+   h2{
+      color:rgb(253, 143, 16);
+      font-size: 15px;
+    font-family: Arial; 
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-right: 40px;
+    display: block;
+  }
+  i{
+      float: left;
+      /* color:red; */
+      color:rgb(109, 107, 107);
+      padding-left: 10px;
+      
+  }
+  p{
+    color:rgb(109, 107, 107);
+    font-size: 11px;
+    font-family: Arial; 
+    font-weight: bold;
+    float: left;
+  }
