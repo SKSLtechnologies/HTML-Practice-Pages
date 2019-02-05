@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+  }
+  
+
+body {  
+    /* border:solid purple; */
+    height:650px;
+  }
+  
+  
+  /* Column container */
+  .container {  
+   
+    display: flex;
+   
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .leftside {
+    
+    flex: 40%;
+    padding: 22px;
+    /* border:solid pink; */
+    padding-top:100px;
+    padding-left:140px;
+  }
+  
+  .rightside {   
+   
+    flex: 60%;
+  padding: 20px;
+  /* border:solid pink; */
+  height:600px;
+
+  }
+  
+  
+  img{
+  
+  
+  float:right;
+  }
+  
+  
+  
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .container {   
+      flex-direction: column;
+    }
+  }
+  
+  .right_container{
+   display: flex;
+   
+    flex-wrap: wrap;
+  
+  /* border:solid blue; */
+  height:570px; 
+ }
+  .logo{
+  
+  flex:9%;
+  /* border:solid green; */
+  
+  }
+  .circle_images{
+      flex:91%;
+  /* border:solid yellow; */
+
+  
+  }
+  hr{
+    border: 7px solid #ffd700;
+  }
+  
+  h2{
+  margin-top:2px;
+  /* border:solid black;  */
+  font-size:32px;
+  text-transform: uppercase;
+  font-weight:bold;
+  
+  }
+  
+  h3{
+  font-size:21px;
+  font-weight:bold;
+  /* border:solid black;  */
+  }
+  p{
+  font-size:19px;
+  font-family:'Open Sans';
+  /* border:solid green; */
+  }
+
+   .circle {
+    height: 210px;
+    width: 210px;
+    background-color: rgb(247, 220, 133);
+    border-radius: 50%;
+    margin-top:120px;
+    margin-left:210px;
+    position: absolute;
+  }
+
+.circle_image2{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+    background-image: url("image2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 370px;
+    margin-bottom:530px;
+    position: relative;
+
+}
+
+.circle_image3{
+    border-radius: 50%; 
+    height: 145px;
+    width: 145px;
+    background-image: url("image3.jpg");
+    background-color:rgba(252, 226, 140, 0.904);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top:-570px;
+    margin-left:450px;
+    position: relative;
+}
+
+.circle_image4{
+    border-radius: 50%; 
+    height: 200px;
+    width: 200px;
+    background-image: url("image4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-left:205px;
+    margin-top:-110px;
+}
+.circle_last{
+    height: 95px;
+    width: 95px;
+    background-color: rgb(247, 220, 133);
+    border-radius: 50%;
+    opacity: 0.9;
+    margin-left:370px;
+    margin-top:-90px;
+  }
