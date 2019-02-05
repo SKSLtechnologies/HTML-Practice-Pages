@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+/* border:solid yellow; */
+}
+
+
+/* Column container */
+.container {  
+ 
+  display: flex;
+ 
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.leftside {
+  
+  flex: 35%;
+  padding: 20px;
+}
+
+.rightside {   
+ 
+  flex: 65%;
+padding: 20px;
+/* border:solid green; */
+height:600px;
+}
+
+.rectangle {
+  height: 300px;
+  width: 43px;
+  background-color: #ffd700;
+  position: absolute;
+  /* border:solid purple; */
+  margin-top:140px;
+}
+
+.imgg {
+  background-image:url("image.jpg");
+background-repeat: no-repeat; 
+  background-size: cover; 
+  padding: 20px;
+height:580px;
+z-index: -1;
+}
+
+img{
+
+
+float:right;
+}
+
+
+.content
+{
+/*margin-top:80px;*/
+/* border:solid red; */
+padding-bottom:15px;
+}
+
+
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+.header{
+ display: flex;
+ 
+  flex-wrap: wrap;
+
+/* border:solid blue; */
+/*height:80px;*/
+}
+.logo_pic{
+
+flex:40%;
+/* border:solid green; */
+
+}
+.line{
+padding-top:40px;
+	flex:60%;
+/* border:solid green; */
+
+}
+hr{
+  border: 7px solid #ffd700;
+}
+
+h2{
+margin-top:2px;
+/* border:solid black; */
+font-size:32px;
+text-transform: uppercase;
+font-weight:bold;
+font-family:'Oswald';
+
+}
+
+h5{
+font-size:21px;
+text-transform: uppercase;
+font-weight:bold;
+font-family:'Oswald';
+
+}
+p{
+font-size:20px;
+font-family:'Open Sans';
+/* border:solid black; */
+}
+
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="leftside">
+    <div class="rectangle"></div>
+    <div class="imgg">
+	</div>
+        
+  </div>
+  <div class="rightside">
+	<div class="header">
+		<div class="line">
+	 	<hr align="left" width="35%">
+		</div>
+		<div class="logo_pic">
+    <img src="logo.png" style="height:70px;">
+    
+		</div>
+		
+	</div>
+	<div class="content">
+    <h2>about the company</h2>
+   <p>S.K Samanta & Co. Pvt Ltd. is an infrastructural based company that has diversified into steel-sector by setting up an automated TMT bar mill at Bilaspur,Chhattishgarh state and is currently looking to expand the firm's operations by delving into the new emerging markets of e-commerce.
+    </p>
+ 
+    <h5>mission</h5>
+    <p>SKSL aims at executing turnkey multidisciplinary projects with total customer satisfaction amidst innovative engineering and quality management acumen within the stipulated time frame. The quest for excellence is a continuous one, and SKSL with its team of dedicated individuals cohere to the mantra of quality, collective involvement work as a team in each project. <br>
+	<br>
+                        The DET NORSKE VERITAS, a reputable institution has awarded management certificate to S. K. Samanta & Co. (P) Ltd., and we strive to be an innovative company committed to delivering excellence in all areas of our business. 
+</p>
+<br>
+<p style="font-size:13px;font-weight: bold;font-family: Oswald;" align="right"><b>SKSL&nbsp;|&nbsp;2020</b></p>
+	</div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
