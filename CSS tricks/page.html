@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Tricks</title>
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link href="/normalize.css" rel="stylesheet">
+
+<style>
+body{
+    text-align: left;
+
+
+}
+h1,h2{
+    font-size: 20px;
+
+}
+.box { width: 100px; float: left; height:30px;}
+.red { background: red; }
+.blue {  background: blue; }
+.green { background: green; }
+.border { border: 1px solid black; }
+
+#example2 {
+  box-sizing: border-box;
+  width: 300px;
+  height: 100px;
+  padding: 30px;  
+  border: 10px solid blue;
+}
+.before-selector::before { 
+  content: "This is before selector -";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+.after-selector::after { 
+  content: "-This is after selector";
+  background-color: yellow;
+  color: red;
+  font-weight: bold;
+}
+
+a::after {
+  content: " (" attr(href) ")";
+ 
+}
+a{
+    text-decoration:none;
+}
+.drop_cap::first-letter  {
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  background-color: yellow;
+  padding: 28px;
+  font-size: 18px;
+}
+
+.square {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(114, 181, 243);
+}
+
+  .trapezoid {
+	border-bottom: 50px solid rgb(114, 181, 243);
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 125px;
+}
+.circle {
+  height: 100px;
+  width: 100px;
+  background-color: rgb(114, 181, 243);
+  border-radius: 50%;
+}
+input:optional{
+    background-color: rgb(243, 114, 200);
+    
+}
+input:required {
+    background-color: rgb(138, 230, 207);
+}
+
+.select_line::selection {
+  color: red;
+  background: yellow;
+}
+
+</style>
+</head>
+
+<body>
+<h1>CSS to multiple classes or selectors</h1>
+      <div class="red border box"></div>
+      <div class="blue border box"></div>
+      <div class="green border box"></div>
+      <br>
+      <br>
+<h2>box-sizing: border-box property</h2>
+      <p>Width and height apply to all parts of the element: content, padding and borders:</p>
+      <div id="example2">Here, the full width is 300px, no matter what!</div>
+      <br>
+
+<h2>:before selector</h2>
+    <p class="before-selector">My name is Donald</p>
+    <br>
+<h2>:after selector</h2>
+    <p class="after-selector">My name is Donald</p>
+    <br>
+<h2>content and content:attr(X) property</h2>
+    <p>The content property is used to insert generated content.Look at the example below</p>
+    <p>
+    <a href="https://en.wikipedia.org/wiki/Computer_science"> What is computer science?</a>
+    <br>
+<h2> q tag </h2>
+   <p> <q>This sentence is under the tag</q>
+    This part is not under the tag.</p>
+    <br>
+<h2>Drop cap</h2>
+    <p class="drop_cap">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tristique lobortis orci ac lacinia. Fusce eu purus eget diam vehicula auctor nec eu elit. Morbi consequat facilisis orci vel malesuada. Donec ultrices molestie sollicitudin. Aliquam pharetra libero enim. Donec et suscipit massa. Donec dui odio, dignissim non sodales et, tincidunt a sapien. Phasellus elit nibh, adipiscing sed blandit vel, interdum et arcu.
+    </p>
+    <br>
+<h2>Position:sticky property </h2>
+    <div class="sticky">I will stick to the screen when you reach my scroll position</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Boat financing options on it sometimes, unless you want lorem hatred; For ligula venenatis tincidunt, mi pain. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Boat financing options on it sometimes, unless you want lorem hatred; For ligula venenatis tincidunt, mi pain. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda to aliquet.Consectetur undergraduate research. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Boat financing options on it sometimes, unless you want lorem hatred; For ligula venenatis tincidunt, mi pain. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, there is no and it was said at times, nisi lorem egestas odio, tincidunt, mi enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, the mass of the author of life. Clinical mourning manufacturing propaganda and bananas. Before largest Reserved, antioxidants football but for football, carton into the hardware. Convallis may sometimes present a tanker Bureau dolor. Now it only with arrows, but very ullamcorper and soccer. But now sterilized at the free financing, but the football scores. Until the child to the package of life, sit Sed gravida Vivamus venenatis. In ante ipsum congue eros does not warm-up. However, protein volleyball nibh gate. To morrow is a lion, and pure. Who wants largest diameter.</p>
+    <br>
+<h2>CSS Shapes </h2>
+    <div class="square"></div>
+    <br>
+    <div class="trapezoid "></div>
+    <br>
+    <div class="circle"></div>
+    <br>
+
+<h2>:required and :optional selectors</h2>
+    <p>An optional input element:<br><input></p>
+    <p>A required input element:<br><input required></p>
+    <br>
+<h2>::selection selector</h2>  
+    <p>Default text selection color</p>
+    <p class="select_line">Custom text selection color</p>
+    <br>
+</body>
+</html>
