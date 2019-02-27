@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+     
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+    margin:0;
+}
+    header {
+      
+      text-align: center;
+      color: black;
+    }
+    header ul {
+      margin-bottom: 0;
+  }
+
+    .header_top{
+      width:100%;
+     height: 80px;
+      /* border:1px solid red;  */
+      display: inline-block;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+    }
+    h1 {
+      color:#370074;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      /* border:1px solid black; */
+      float: left;
+      
+    }
+    
+    .fa {
+      padding:10px;
+      font-size: 35px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+       margin: 5px 2px; 
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    a{
+      font-size:22px;
+      font-family: 'Times New Roman', Times, serif;
+      
+
+    }
+    ul {
+      padding: 15px;
+      background: #A01620;
+      /* border:1px solid red; */
+      margin-top:-5px;
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+     a:hover {   
+      color: black;
+    }
+    @media (max-width: 500px) {
+     h1{
+       
+      font-size:20px; 
+       
+     }
+     li{
+        display:block;
+        padding:5px;
+       
+     }
+    }
+    /*************slide container**************/
+    .mySlides {display: none}
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+     
+    /* The dots/bullets/indicators */
+    /* .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+     */
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    
+    /*****************************construction page********************************/
+
+.construction{
+    height: 530px;
+    text-align: center;
+   }
+  
+   .sub_construction{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    grid-row-gap: 30px;
+    margin-left:50px;
+  
+   }
+   
+   .sub_construction > img
+   {
+    text-align: center;
+    height:200px;
+    /* width: 300px; */
+    max-width: 100%;
+   }
+  
+   .c_header{
+     text-align:center;
+     
+   }
+  
+   .c_para{
+     border:1px solid black;
+     position: relative;
+     top:20%;
+     
+   }
+   h2{
+       color: darkblue;
+       font-size: 30px;
+   }
+   .top{
+      float: right;
+  }
+  

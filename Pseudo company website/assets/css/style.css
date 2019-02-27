@@ -1,0 +1,496 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+html{
+  scroll-behavior: smooth;
+
+}
+body{
+     /* background-color: #AB8300; */
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+    margin:0;
+}
+    header {
+      
+      text-align: center;
+      color: black;
+    }
+    header ul {
+      margin-bottom: 0;
+  }
+
+    .header_top{
+      width:100%;
+     height: 80px;
+      /* border:1px solid red;  */
+      display: inline-block;
+    }
+
+    a {
+      color:white;
+      /* color: #e8b730; */
+      text-decoration: none;
+    }
+    h1 {
+      color:#370074;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+      /* border:1px solid black; */
+      float: left;
+      
+    }
+    
+    .fa {
+      padding:10px;
+      font-size: 35px;
+      width: 30px;
+      text-align: center;
+      text-decoration: none;
+       margin: 5px 2px; 
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    
+    .fa-google {
+      background: #dd4b39;
+      color: white;
+    }
+    a{
+      font-size:22px;
+      /* font-family: 'Times New Roman', Times, serif; */
+  
+
+    }
+    .sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+
+    .navbar{
+
+       /* border:3px solid blue;  */
+      /* margin-top:-4px; */
+      /* padding: 15px; */
+      /* position: fixed;
+      top:0; */
+      width: 100%;
+      z-index: 999;
+      
+      /* overflow: hidden; */
+    }
+    ul {
+      padding: 15px;
+      background: #A01620;
+      /* background: rgba(0,0,0,0.5); */
+      /* border:1px solid red; */
+      margin-top:-5px;
+    }
+    li {
+      display: inline;
+      padding: 0px 20px 0px 20px;
+    }
+     a:hover {   
+      color: black;
+    }
+    @media (max-width: 500px) {
+     h1{
+       
+      font-size:20px; 
+       
+     }
+     li{
+        display:block;
+        padding:5px;
+       
+     }
+    }
+    /*************slide container**************/
+    .mySlides {display: none}
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 100%;
+      position: relative;
+      margin: auto;
+    
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+     
+    /* The dots/bullets/indicators */
+    /* .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+     */
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+
+/*************** company intro***************/
+
+h3{
+  font-size: 29px;
+  text-transform: uppercase;
+  text-align: center;
+  /* text-align: center; */
+  color: #A45317;
+  /* border:1px solid black; */
+  margin-top:10px;
+  /* margin-bottom: 0; */
+
+}
+
+article>  p{
+    /* color: rgb(129, 121, 121); */
+    color: #0E665D;
+    /* color: black; */
+    font-size: 20px;
+    
+    text-align: center;
+
+}
+article{
+      
+  max-width:500px;
+  padding:20px;
+  margin:0 auto;
+ }
+
+  /******************** division***************************/
+  h2{
+    text-transform: uppercase;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:30px;
+    text-align: center;
+
+    /* position: relative; */
+    top: 120px;
+
+}
+  
+.division_container {
+  width:99%;
+  height:750px;
+    display: grid;
+grid-template-columns: repeat( 3, 1fr );
+grid-column-gap: 5px;
+padding: 10px;
+/* border:1px solid black; */
+}
+.box11 {
+  border: 1px solid rgb(187, 178, 178);
+  height:auto;
+  position: relative;
+  background: white;
+  background-image: url('https://www.nationaltenders.com/upload/events/1476279071_promotionalImage.rpath.1200.0.medium.1464279918224.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  
+
+}
+
+.box22 {
+  border: 1px solid rgb(187, 178, 178);
+  height:auto;
+  position: relative;
+  background: white;
+  background-image: url('https://5.imimg.com/data5/XN/ML/MY-6016224/rolling-mill-plants-500x500.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+
+
+}
+.box33 {
+  border: 1px solid rgb(187, 178, 178);
+  height:auto;
+  position: relative;
+  background: white;
+  background-image: url('https://mybroadband.co.za/news/wp-content/uploads/2016/01/Programmer-working-computer-code.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+
+
+}
+
+
+.division_container a {
+  color:black;
+ /* border:1px solid black; */
+  text-decoration: none;
+  position: relative;
+  top:40%;
+  left:40%;
+  font-size: 40px;
+  /* z-index: 999; */
+  opacity: 1;
+  font-weight: 900;
+  background: white;
+
+}
+
+@media (max-width:1200px)
+{
+  .division_container{
+
+     
+      columns: 3;
+      width: calc(100% - 30px);
+      box-sizing: border-box;
+      padding:20px 20px 20px 0px;
+  
+  }
+} 
+@media (max-width:768px)
+{
+  .division_container{     
+      columns: 2;
+      
+  }
+}
+
+@media (max-width:480px)
+{
+  .division_container{     
+      columns: 1;
+      
+  }
+}
+
+/*****************************about us********************************/
+
+.aboutus_container{
+
+/* background-color: rgb(209, 137, 137); */
+height: 732px;
+/* border:1px solid pink; */
+}
+.aboutus_container img{
+
+  height: 250px;
+  float:left;
+  margin:10px 0 0 90px;
+}
+
+.about_article{
+/* border:solid black; */
+  max-width:800px;
+  padding:20px;
+ margin-left:450px;
+
+}
+.about_article p{
+
+  text-align: justify;
+
+}
+h4{
+   text-align: center;
+   
+   font-size:22px;
+   color: #A45317;
+
+}
+.why_us{
+  float:left;
+  /* max-width: 50%; */
+  /* border:solid red; */
+  height: 150px;
+  margin-left:70px;
+}
+.why_us h4{
+  text-align: left;
+}
+
+.why_us  p{
+ 
+  text-align: left;
+}
+article{
+  text-align: center;
+}
+.brochure{
+  max-width:80%;
+  /* border:1px solid black; */
+  height: 150px;
+  /* float: right; */
+  margin-right:50px;
+
+}
+h5{
+  font-size: 18px;
+  color:#0E665D;
+  /* text-align: center; */
+
+}
+
+button {
+  background-color:#3B5998;
+  border: none;
+  color: white;
+  /* padding: 15px 32px; */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*****************************contact us********************************/
+
+/* .contact_container{
+height:634px;
+border:solid red;
+
+
+}
+.sub_container{
+
+  display:grid;
+grid-template-columns: repeat( 3, 1fr );
+grid-column-gap: 5px;
+padding: 10px;
+}
+
+
+h6{
+
+  text-align: center;
+  font-size:18px;
+}
+.box2 {
+  border: 1px solid green;
+  height: 450px;
+  position: relative;
+  /* background: white; */
+  /* margin-top:30px; */
+
+
+
+/*****************************contact us********************************/
+
+.contact_container{
+  height:534px;
+  /*border:solid red;*/
+  
+  
+  }
+  .sub_container{
+  
+  display:grid;
+  grid-template-columns: repeat( 3, 1fr );
+  grid-column-gap: 5px;
+  padding: 10px;
+  background-color: white;
+  /* border:1px solid black; */
+  margin-top:0;
+  }
+  
+  h6{
+  
+    text-align: center;
+    font-size:18px;
+    color:#0E665D;
+  }
+  .box2 {
+    /*border: 1px solid green;*/
+    height: auto;
+    position: relative;
+   
+    /* background: white; */
+    /* margin-top:30px; */
+  }
+  
+  .myUl{
+    background-color:white;
+  
+   }
+  .top{
+    float: right;
+    /* margin-top:-85px; */
+  }
+
+  .sub_container img {
+
+  
+    /* margin-right:auto; */
+    border:1px solid rgb(138, 125, 125);
+  
+    
+  }
