@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+body{
+    color:rgb(41, 40, 31);
+  
+}
+
+
+h1{
+    font-size:25px;
+     text-align: center; 
+    text-transform: lowercase;
+    color:rgb(37, 21, 95);
+}
+h2{
+    font-size:20px;
+   
+    text-transform: capitalize;
+    color:rgb(95, 21, 49);
+}
+
+q{
+    text-transform: lowercase;
+}
+
+/************************display property************************/
+div{
+    border:1px solid red;
+}
+
+span{
+    border:1px solid red;
+
+}
+p.hidden{
+    display:none;
+}
+
+/************************margin:auto property************************/
+#main1 {
+    width: 600px;
+    margin: 0 auto; 
+  }
+
+  #main2 {
+    max-width: 600px;
+    margin: 0 auto; 
+  }
+
+  /*******************the box model**********************/
+
+  .simple1 {
+    width: 500px;
+    margin: 20px auto;
+  }
+  
+  .fancy1 {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border-width: 10px;
+  }
+
+  /*******************the box-sizing property**********************/
+  .simple2 {
+    width: 500px;
+    margin: 20px auto;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  .fancy2 {
+    width: 500px;
+    margin: 20px auto;
+    padding: 50px;
+    border: solid blue 10px;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
+  /************This ensures that all elements are always sized in this more intuitive way.**************/
+
+  /* * {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+  } */
+
+  /********************the position property***********************/
+  .static {
+    position: static;
+  }
+
+  .relative1 {
+    position: relative;
+  }
+  .relative2 {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background-color: rgb(144, 110, 224);
+    width: 500px;
+  }
+
+  .fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: white;
+  }
+
+  .relative {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    top:50px;
+  }
+  .absolute {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 300px;
+    height: 200px;
+  }
+
+  /**********************position example*******************/
+  .container {
+    position: relative;
+    border:solid blueviolet;
+  }
+  nav {
+    position: absolute;
+    left:0px;
+    /* left: 10px; */
+    width: 200px;
+    /* border:solid pink 1px;  */
+  }
+  .container section {
+    /* position is static by default */
+    margin-left: 220px;
+    border:solid yellow;
+  }
+ 
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 20px;
+    background-color: rgb(141, 206, 218);
+    width: 100%;
+  }
+
+  /****************float property************/
+div.image_container{
+
+    height:350px;
+}
+.image_container  img {
+    float: right;
+    margin: 0 0 1em 1em;
+  }
+
+  /***********clear property**************/
+
+  .box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+   .after-box {
+    clear: left;
+   
+    border:solid yellow;
+  }
+
+  /**********clearafix hack***********/
+  img {
+    float: right;
+  }
+
+  .clearfix1 {
+    overflow: auto;
+  }
+
+  /******float layout example*******/
+   .float_nav {
+    float: left;
+    width: 190px;
+    left:10px; 
+    border:solid pink 3px;
+  }
+.float_section {
+    margin-left: 200px;
+  }
+  
+  /************percent width********/
+  article img {
+    float: right;
+    width: 50%;
+  }
+
+  article{
+      border:solid red;
+  }
+
+/*************media *****************/
+.media_nav {
+  float: left;
+  width: 25%;
+  border:solid border pink;
+  margin-left:20px;
+}
+
+.media_section {
+  margin-left: 25%;
+  border:solid border yellow;
+}
+
+.media_container {
+  overflow:relative;
+  border:solid blueviolet;
+}
+  /*****************media property************/
+   @media screen and (min-width:600px) {
+   .media_nav {
+      float: left;
+      width: 25%;
+    }
+    .media_section {
+      margin-left: 25%;
+    }
+  }
+  @media screen and (max-width:499px) {
+    .media_nav li{
+      display: inline;
+    }
+  } 
+
+  /*****************inline block ******************/
+
+  /* .box {
+    float: left;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  } */
+   .after-box {
+    clear: left;
+    /* margin-left: 10px; */
+    border:solid yellow;
+  }
+
+  .box2 {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    margin: 1em;
+  }
+
+  /************inline layout**************/
+  .inline_container .inline_nav {
+    display: inline-block;
+    vertical-align: top;
+    width: 25%;
+    /* border:solid pink; */
+  }
+  .column {
+    display: inline-block;
+    vertical-align: top;
+    width: 75%;
+    border:solid green;
+    /* margin-left:130px; */
+  }
+ .inline_container{
+     margin-left: 220px;
+     border:solid yellow;
+
+ }
+
+
+ /*************column**********/
+ .three-column {
+  padding: 1em;
+  -moz-column-count: 3;
+  -moz-column-gap: 1em;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 1em;
+  column-count: 3;
+  column-gap: 1em;
+}
+
+
+/**********flex******************/
+
+.flex_container {
+  
+  border:solid blueviolet;
+  
+  display: flex;
+}
+
+.flex_nav {
+  width: 200px;
+  border:solid pink 3px;
+  margin-left: 10px;
+}
+.flex-column {
+  -webkit-flex: 1;
+          flex: 1;
+}
+
+
+.flex_container section {
+  /* position is static by default */
+  margin-left: 200px;
+  border:solid yellow;
+}
+
+
+/*********fancy layout using flex **********/
+.flex_container2 {
+  display: -webkit-flex;
+  display: flex;
+}
+.initial {
+  -webkit-flex: initial;
+          flex: initial;
+  width: 200px;
+  min-width: 100px;
+}
+.none {
+  -webkit-flex: none;
+          flex: none;
+  width: 200px;
+}
+.flex1 {
+  -webkit-flex: 1;
+          flex: 1;
+}
+.flex2 {
+  -webkit-flex: 2;
+          flex: 2;
+}
+
+/***********************centering using flex****************/
+.vertical-container {
+  height: 300px;
+  display: -webkit-flex;
+  display:         flex;
+  -webkit-align-items: center;
+          align-items: center;
+   -webkit-justify-content: center;
+          justify-content: center
+          border:solid blue;
+}

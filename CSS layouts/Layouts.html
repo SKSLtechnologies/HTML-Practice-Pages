@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- used the codes from this site http://learnlayout.com/display.html -->
+    <title>CSS Layouts</title>
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+    <h1><q>display</q> property</h1>
+            <h2>block element</h2>
+            <div>
+                This is div tag,div is the standard block-level element. A block-level element starts on a new line and stretches out to the left and right as far as it can.
+            </div>
+            <h2>inline element</h2>
+                <span>This is an inline element. This is inside a span tag</span>
+
+            <h2>none</h2>
+            <p>This is a visible sentence</p>
+            <p class="hidden">This is a hidden sentence whose display property is set as <q>none</q></p>
+
+    <h1>margin:auto property</h1>
+            <div id="main1">
+                Setting the width of a block-level element will prevent it from stretching out to the edges of its container to the left and right. Then, you can set the left and right margins to auto to horizontally center that element within its container. The element will take up the width you specify, then the remaining space will be split evenly between the two margins.
+                
+                The only problem occurs when the browser window is narrower than the width of your element. The browser resolves this by creating a horizontal scrollbar on the page.
+            </div>
+            <br>
+            <div id="main2">
+                Using max-width instead of width in this situation will improve the browser's handling of small windows. This is important when making a site usable on mobile. Resize this page to check it out!
+                
+                By the way, max-width is supported by all major browsers including IE7+ so you shouldn't be afraid of using it.
+                
+                </div>
+    <h1>The box model</h1>
+            <div class="simple1">
+                I'm smaller...
+                
+            </div>
+            <div class="fancy1">
+                    And I'm bigger!
+                    
+            </div>
+
+     <h1>The box-sizing property</h1>
+            <div class="simple2">
+                We're the same size now!
+                
+                </div>
+                <div class="fancy2">
+                    Hooray!
+                    
+                    </div>
+
+    <h1>The <q>position</q> property</h1>
+            <div class="static">
+                static is the default value. An element with position: static; is not positioned in any special way. A static element is said to be not positioned and an element with its position set to anything else is said to be positioned.
+                
+            </div>
+            <br>
+            <div class="relative1">
+                relative behaves the same as static unless you add some extra properties.
+                
+            </div>
+            <div class="relative2">
+                Setting the top, right, bottom, and left properties of a relatively-positioned element will cause it to be adjusted away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+            </div>
+            
+            <div class="fixed">
+                This is fixed positioned element.
+                
+                </div>
+                
+                <div class="relative">
+                    This element is relatively-positioned. If this element was position: static; its absolutely-positioned child would escape and would be positioned relative to the document body.
+                    <div class="absolute">
+                        This element is absolutely-positioned. It's positioned relative to its parent.
+                        
+                   </div>
+                </div>
+                <br>
+                <br>
+        <h1>The <q>position</q> example</h1>
+                <div class="container">
+                    <nav>
+                        <li>Home</li> 
+                 <li>Taco menu</li>
+                <li>Draft List</li>
+                <li>Hours</li>
+                <li>Directions</li>
+                <li>Contact</li>
+
+                    </nav>
+                    <section>
+                        The margin-left style for sections makes sure there is room for the nav. Otherwise the absolute and static elements would overlap
+                        
+                        </section>
+                        <section>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                        
+                        </section>
+                        <section>
+                        Notice what happens when you resize your browser. It works nicely!
+                        
+                        </section>
+                        
+                </div>
+
+                <footer>
+                    If you use a fixed header or footer, make sure there is room for it! I put a margin-bottom on the body.
+                    
+                    </footer>
+        <br>
+    <div class="image_container">
+        <h1>The <q>float</q> property</h1>
+            <img src="http://learnlayout.com/images/ilta.png">
+    </div>
+        
+    <h1>The <q>clear</q> property</h1>
+        <div class="box">I feel like floating</div>
+        <section class="after-box">
+            Using clear we have now moved this section down below the floated div. You use the value left to clear elements floated to the left. You can also clear right and both.
+            
+            </section>
+        <br>
+        <br>
+        
+    <h1>The clearfix hack</h1>
+    <!-- <div>An Image
+        Uh oh... this image is taller than the element containing it, and it's floated, so it's overflowing outside of its container!
+        <img src="http://learnlayout.com/images/ilta.png">
+    </div> -->
+
+
+    <div class="clearfix1">An Image
+        Much better!
+        <img src="http://learnlayout.com/images/ilta.png">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>The float layout example</h1>
+    <div class="clearfix1">
+        <nav class="float_nav">
+            <li>Home</li> 
+                 <li>Taco menu</li>
+                <li>Draft List</li>
+                <li>Hours</li>
+                <li>Directions</li>
+                <li>Contact</li>
+
+        </nav>
+        <section class="float_section">
+            This example works just like the last one. Notice we put a clearfix on the container. It's not needed in this example, but it would be if the nav was longer than the non-floated content.
+            
+            </section>
+            <section class="float_section">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+            
+            </section>
+            
+    </div>
+    <h1>The percent width</h1>
+    <article class="clearfix1">an image
+        You could even use min-width and max-width to limit how big or small the image can get!
+        <img src="http://learnlayout.com/images/ilta.png">
+        </article>
+
+        <h1>The media query</h1>
+        <div class="media_container">
+            <nav class="media_nav">
+                <li>Home</li> 
+                 <li>Taco menu</li>
+                <li>Draft List</li>
+                <li>Hours</li>
+                <li>Directions</li>
+                <li>Contact</li>
+
+            </nav>
+            <section class="media_section">
+                Now when you resize your browser it's even cooler than ever!
+                </section>
+               
+                <section class="media_section">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </section>
+                
+        </div>
+
+        <h1>inline-block property</h1>
+        <h2>Using float</h2>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="box">
+                I'm floating!
+            </div>
+            <div class="after-box">
+                I'm using clear so I don't float next to the above boxes.
+                
+                </div>
+          
+            <h2>Using inline block</h2>
+
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+            <div class="box2">
+                I'm an inline block!
+                
+            </div>
+
+            <div>
+                I don't have to use clear in this case. Nice!
+                
+            </div>
+            <br>
+            <br>
+            <br>
+            <h1>inline-block layouts</h1>
+                <div class="inline_container">
+                    <nav class="inline_nav">
+                        <li>Home</li> 
+                         <li>Taco menu</li>
+                        <li>Draft List</li>
+                        <li>Hours</li>
+                        <li>Directions</li>
+                        <li>Contact</li>
+        
+                    </nav>
+                    <div class="column">
+                        <section>
+                       Tada!
+                        </section>
+                       
+                        <section>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                        </section>
+                    </div>
+
+
+                </div>
+
+                <h1>Column</h1>
+                <div class="three-column">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                </div>
+
+                <h1>Flex property</h1>
+                <div class="flex_container">
+                        <nav class="flex_nav">
+                            <li>Home</li> 
+                             <li>Taco menu</li>
+                            <li>Draft List</li>
+                            <li>Hours</li>
+                            <li>Directions</li>
+                            <li>Contact</li>
+            
+                        </nav>
+                        <div class="flex_column">
+                            <section>
+                                    Flexbox is so easy!
+                            </section>
+                           
+                            <section>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+                            </section>
+                        </div>
+    
+    
+                    </div>
+
+                <h1>Fancy layout using flex</h1>
+                <div class="flex_container2">
+                    <div class="initial">
+                            I will be 200px when there is room, and I will shrink down to 100px if there is not room, but no smaller.
+                            
+                    </div>
+                    <div class="none">
+                            I will always be 200px, no matter what.
+                            
+                        </div>
+                        <div class="flex1">
+                                I will fill up 1/3 of the remaining width.
+                                
+                        </div>
+                        <div class="flex2">
+                                I will fill up 2/3 of the remaining width.
+                                
+                        </div>
+                    </div>
+                    <h1>Centering using flex</h1>
+                    <div class="vertical-container">
+                            <div>
+                            Finally, it's easy to vertically center something in CSS!
+                            
+                            </div>
+                        </div>
+
+
+</body>
+</html>
