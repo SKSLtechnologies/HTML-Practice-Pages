@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SKSL portfolio</title>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald" rel="stylesheet">
+    <link href="/normalize.css" rel="stylesheet">
+    <link href="portfolio_style.css" type="text/css" rel="stylesheet">
+    <link href="reset.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(window).scroll(function(){
+   
+    $("header").css("opacity", 1 - $(window).scrollTop()/200);
+  });
+
+
+     var myVar;
+$( document ).ready(function () {
+          $(".box").slice(0,6).show();
+		if ($(".box:hidden").length != 0) {
+			$("#loadMore").show();
+		}		
+		$("#loadMore").on('click', function (e) {
+			e.preventDefault();
+           
+            /***********************  for spin wheel ***************************/
+    
+            $("#loadMore").html( $( '.lds-dual-ring').show());
+        
+            // $( '.lds-dual-ring').show();
+            setTimeout(function() { $('.lds-dual-ring').hide(); }, 2000);
+            /*******************for loading images*************/
+			$(".box:hidden").delay(2000).slice(0,15).fadeIn(2000)
+            if ($(".box:hidden").length != 0) {
+			$("#loadMore").show();
+            }
+			if ($(".box:hidden").length == 0) {
+		 		$("#loadMore").fadeOut('slow').style.display = "none";
+		 	}
+	     });
+	});
+  
+
+</script>
+    
+</head>
+<body>
+    
+    <div class="top_header">
+    <!-- <p class="top_header_para" style="color:white;">
+        <i class="fa fa-phone" style="font-size:18px"></i>
+        (033)66374090 &nbsp;&nbsp;
+        <span style="font-size: 18px;">&#9993;</span>
+        kol@sksl.in
+    </p> -->
+    </div>
+
+   
+    <!-- <header>
+        <img src="logo.png" style="height:75px;">
+        <h1>s.k.<span style="color:#A01620;"> samanta & co(p) ltd</span></h1>
+    </header> -->
+
+    <header>
+            
+                  <img src="logo.png" style="height:70px;float:left;margin-top:5px;">
+                  <h1>&nbsp;s.k.<span style="color:#A01620;font-size: 25px;"> samanta & co(p) ltd</span></h1>
+                    
+                    <div class="box1">
+                            <a href="#" class="fa fa-facebook" ></a>
+                            <a href="#" class="fa fa-twitter" ></a>
+                           <a href="#" class="fa fa-google" ></a>
+                    </div>
+                
+            
+                    
+    </header>
+    <br>
+
+    <div class="container">
+
+        <div class="box">
+            <img src="Bulk_Materials/BM1.jpg"> 
+            <div class="overlay">
+                <p class="img_description">Planning,Design,Engineering,Construction,Fabrication Supply,Erection and Trial Room</p>
+             </div>
+            <h3><span>Project </span>  
+                <hr>
+                Dipka main coal handling plant </h3>
+            <h4><span>Owner</span>
+                <hr>
+                 Southern Eastern Coalfields Ltd,Bilaspur </h4>
+        
+           
+        </div>
+        <div class="box">
+            <img src="Bulk_Materials/BM2.jpg"> 
+            <div class="overlay">
+                    <p class="img_description">Execution of EPC contract for 3000 T capacity silo with Rapid Loading Sytem</p>
+        </div>
+
+            <h3><span>Project </span>  
+                <hr>
+                Rapid loading system for Dudhichua </h3>
+            <h4><span>Owner</span>
+                <hr>
+                Northern Coalfields Limited,Singrauli </h4>
+           
+        </div>
+
+        <div class="box">
+            <img src="Bulk_Materials/BM3.jpg">   
+            <div class="overlay">
+                    <p class="img_description">Execution of EPC Contract for Coal Handling Plant with 1600 TPH Cross Country Conveying System</p>
+            </div>
+            <h3><span>project</span>
+                <hr>
+                Coal handling plant for Nigahi Project,Package-'B'</h3> 
+            <h4><span>Owner</span>
+                <hr>
+                Northern Coalfields Limited,Singrauli</h4>
+          
+          
+
+        </div>
+
+        <div class="box" >
+            <img src="Bulk_Materials/BM4.jpg">
+            <div class="overlay">
+                    <p class="img_description">Execution of EPC Contract for Coal Handling plant having 1500 TPH Conveyor system</p>
+            </div>   
+            <h3><span>project</span>
+                <hr> 
+                Coal handling plant for Dudhichua OCP,Phase-II </h3>
+            <h4><span>owner</span>
+                <hr>
+                Northern Coalfields Limited,Singrauli</h4> 
+             
+           
+        </div>
+
+        <div class="box" >
+            <img src="Bulk_Materials/BM5.jpg"> 
+            <div class="overlay">
+                    <p class="img_description">Execution of EPC Contract for Conveyor capacity of 1200 TPH</p>
+            </div>  
+            <h3><span>project</span>
+                <hr>
+                Coal handling plant for Belpahar </h3>
+            <h4><span>owner</span>
+                <hr>
+                Mahanadi Coalfields Limited,Sambalpur </h4>
+            
+           
+        </div>
+
+        <div class="box" >
+            <img src="Bulk_Materials/BM6.jpg">   
+            <div class="overlay">
+                    <p class="img_description">Planning,design,engineering,construction,fabrication,
+                        supply and testing of Coal.</p>
+            </div>
+            <h3><span>project</span>
+                <hr>
+                Coal handling plant with rapid loading Sio Mahespur</h3>
+    
+            <h4><span>owner</span>
+                <hr> 
+                Bharat Coking Coal Ltd,Dhanbad</h4>        
+            
+           
+        </div>
+
+        <div class="box" style="display: none;">
+            <img src="Bulk_Materials/BM7.jpg">   
+            <div class="overlay">
+                    <p class="img_description">Execution of EPC Contract for Interim Coal Handling Plant at Block-B OCP</p>
+            </div>
+            <h3><span>project</span>
+                <hr> 
+                Interim coal handling plant for Gorbi Block-B project </h3>
+    
+                <h4><span>owner</span>
+                    <hr>
+                   Northern Coalfields Limited,Singrauli</h4>    
+                
+           
+        </div>
+
+        <div class="box" style="display: none;" >
+            <img src="Bulk_Materials/BM8.png">  
+            <div class="overlay">
+                    <p class="img_description">Roadside Hydraulic Wagon Trippler with Hydraulic operated side arm with 1500 TPH</p>
+            </div> 
+            <h3><span>project</span>
+                <hr>
+                Ore Handling Plant,Part-A,for Bhilai Steel Plant(under 7.0 MT expansion)</h3>
+
+            <h4><span>owner</span>
+                <hr>
+                Steel Authority Of India Ltd,Bhilai </h4>        
+          
+        </div>
+
+        <div class="box" style="display: none;" >
+                <img src="Workshops/WS9.jpg">  
+                <div class="overlay">
+                        <p class="img_description">Execution of Civil Works of 3500 Te capacity RCC Silo with 1500 TPH Conveyor System</p> 
+                </div> 
+
+                <h3><span>project</span>
+                    <hr>
+                    Coal handling plant for Amlohri CHP Stage-II </h3>
+                        
+                <h4><span>owner</span>
+                    <hr>
+                    Northern Coalfields Limited </h4>
+                    
+              
+            </div>
+          
+       <div class="box" style="display: none;">
+                <img src="Workshops/WS10.jpg">  
+                <div class="overlay">
+                        <p class="img_description">Execution of EPC contract for E&M repair workshop on turnkey basis</p>
+                </div> 
+                <h3><span>project</span>
+                    <hr>
+                    E&M Repair Workshop for Nigahi OCP </h3>
+        
+                <h4><span>owner</span>
+                    <hr>
+                    Northern Coalfields Limited,Singrauli </h4>
+                
+                
+        </div>
+
+        <div class="box" style="display: none;">
+                <img src="Workshops/WS11.jpg">  
+                <div class="overlay">
+                        <p class="img_description">Execution of EPC Contract for Field Workshop on turnkey basis</p>
+            </div>
+
+                <h3><span>project</span>
+                    <hr>
+                    Field workshop for khadia OCP </h3>
+
+                <h4><span>owner</span>
+                    <hr> 
+                    Northern Coalfields Limited,Singrauli </h4>
+                
+                
+        </div>
+
+        <div class="box" style="display: none;">
+            <img src="Cross_Country/CC12.jpg">  
+            <div class="overlay">
+                    <p class="img_description">Manufacturing,supplying and laying of 1000 mm dia new pipeline</p>
+            </div> 
+
+            <h3><span>project</span>
+                <hr> 
+                Manufacturing, supplying and laying of new pipeline and rehabilitation of old pipelines for IWSS of NCL </h3>
+
+            <h4><span>owner</span>
+                <hr>
+                Northern Coalfields Limited,Singrauli </h4>
+    
+           
+        </div>
+       
+        <div class="box" style="display: none;">
+            <img src="Cross_Country/CC13.jpg">  
+            <div class="overlay">
+                    <p class="img_description">Execution of nine number water conveying and treatment packages of 100 km length (approx)</p>
+        </div> 
+
+            <h3><span>project</span>
+                <hr>
+                Water conveying and water treatment packages  </h3>
+        
+            <h4><span>owner</span>
+                <hr>
+                Northern Coalfields Limited,Mahanadi </h4>    
+        
+            
+        </div>
+
+
+        <div class="box" style="display: none;">
+            <img src="Cross_Country/CC14.jpg">  
+            <div class="overlay">
+                    <p class="img_description">Construction and installation of 1.5 Lakh M/T per annum capacity Steel Rolling Mill to produce TMT bars</p>
+        </div>
+
+            <h3><span>project</span>
+                <hr>
+                Setting up Steel Rolling Mill at Silpehari,Bilaspur Water treatment plant for Lakhanpur Group of Mines </h3>
+            
+            <h4><span>owner</span>
+                <hr>
+                Shakti Development Pvt. Ltd.,Bilaspur </h4>        
+            
+            
+        </div>
+
+        <div class="box" style="display: none;">
+            <img src="Building/B15.jpg">  
+            <div class="overlay">
+                    <p class="img_description">Construction of JNV School Complex including Hostel, Residential Quarters</p>
+        </div>
+            <h3><span>project</span>
+                <hr>
+                 Construction of JNV School Complex for Durgapur </h3>
+            <h4><span>owner</span>
+                <hr>
+                Jawahar Navodaya Vidyalaya Samiti, Ministry of HRD,Govt. of India </h4>
+            
+            
+        </div>
+
+         <!-- load more button -->
+         <div id="loadMore" >
+            <a href="#" >Load More</a> 
+                <div class="lds-dual-ring" style="display:none"></div>
+        </div>
+
+
+    </div>  <!--   End of container -->
+    
+   
+</body>
+</html>
+
+<!-- <div id="loadMore">
+    <a href="#" >Load More</a> 
+</div> -->
+    
+
+<!-- 
+    
+    $( document ).ready(function () {
+    $(".box").slice(0,3).show();
+  // $(".box").slice(0,3).css("background-color", "yellow");
+  if ($(".box:hidden").length != 0) {
+      $("#loadMore").show();
+  }		
+  $("#loadMore").on('click', function (e) {
+      e.preventDefault();
+      $(".box:hidden").slice(0,9).slideDown();
+      if ($(".box:hidden").length == 0) {
+          $("#loadMore").fadeOut('slow');
+      }
+  });
+}); -->
