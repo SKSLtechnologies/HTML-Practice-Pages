@@ -1,125 +1,93 @@
 * {
     box-sizing: border-box;
   }
-  
-
-body {  
-     /* border:solid purple;  */
-    height:600px;
-  }
-  
-  
-  /* Column container */
+    
   .container {  
    
-    display: flex;
-   
-    flex-wrap: wrap;
-  }
+    max-width:1110px;
+    /* border:1px solid black;  */
+    margin:0 auto;
+    margin-top:10px;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: auto;
   
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
+
+  }
+  /********************leftside**********************/
   .leftside {
     
-    flex: 40%;
-    /* padding: 22px; */
-    /* border:solid pink;  */
+   max-width:500px;
     padding-top:100px;
-    padding-left:60px;
+    padding-left:25px;
+    /* border:solid green; */
+    
   }
-  
-  .rightside {   
-   
-    flex: 60%;
-  /* padding: 10px; */
-  /* border:solid pink; */
-  height:600px;
 
-  }
-  
-  
-  img{
-  
-  
-  float:right;
-  }
-  
-  
-  
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 700px) {
-    .container {   
-      flex-direction: column;
-    }
-  }
-  
-  .right_container{
-   display: flex;
-   
-    flex-wrap: wrap;
-  
-  /* border:solid blue;  */
-  height:570px; 
- }
-  .logo{
-  
-  flex:9%;
-  /* border:solid green; */
-  
-  }
-  .circle_images{
-      flex:91%;
-  /* border:solid yellow;  */
-
-  
-  }
   hr{
-    border: 7px solid #ffd700;
-  }
-  
-  h2{
-  margin-top:2px;
-  /* border:solid black;  */
-  font-size:41px;
-  letter-spacing: -2px;
+  width:143px;
+  border:7px solid #FFD814;
+  margin-top:35px;
+  margin-left:1px;
+}
+h1{
+  font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
-  font-weight:bold;
-  font-family: 'Oswald', 'Open Sans', sans-serif;
-  
-  
-  }
-  
-  h3{
-  font-size:25px;
-  
-  font-weight: 400;
-  font-family: 'Oswald', 'Open Sans', sans-serif;
-  /* border:solid black;  */
-  }
-  p{
-  font-size:19px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* border:solid green;  */
-  }
+  font-size: 40px;
+  font-weight: bolder;
+}
 
+h2{
+  font-family: 'Oswald', sans-serif;
+  text-transform: capitalize;
+  font-size: 26px;
+  font-weight: 200;
+  letter-spacing: 1px;
+
+}
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size:19px;
+  text-align:left;
+  font-weight:600;
+}
+
+
+/*****************rightside******************/
+
+ .circle_images{
+  position: relative;
+  padding-top:10px;
+  max-width: 710px;
+  /* border:1px solid red;  */
+ }
+
+  img{
+    float:right;
+    max-width:70px;
+    height:70px; 
+    padding-top:10px;
+    padding-right: 10px;
+  
+ }
    .circle {
-    height: 280px;
-    width: 280px;
-    background-color: rgb(247, 220, 133);
+    height: 290px;
+    width: 270px;
+    background-color: #FFEB82;
     border-radius: 50%;
-    margin-top:140px;
-    margin-left:160px;
+    margin-top:160px;
+    margin-left:140px;
     position: absolute;
   }
 
 .circle_image2{
     border-radius: 50%;
-    height: 330px;
-    width: 330px;
+    height: 340px;
+    width: 320px;
     background-image: url("image2.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left: 370px;
+    margin-left: 315px;
     margin-bottom:530px;
     position: relative;
 
@@ -127,47 +95,60 @@ body {
 
 .circle_image3{
     border-radius: 50%; 
-    height: 220px;
-    width: 220px;
+    height: 210px;
+    width: 210px;
     background-image: url("image3.jpg");
-    background-color:rgba(252, 226, 140, 0.904);
+    background-color:#FFEB82;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-top:-620px;
-    margin-left:490px;
+    margin-top:-610px;
+    margin-left:450px; 
+    margin-right:30px;
     position: relative;
 }
 .circle_mid{
   border-radius: 50%; 
-  height: 220px;
-  width: 220px;
-  background-color:rgba(252, 226, 140, 0.904);
-   margin-top:-220px;
-  margin-left:490px;
+  height: 210px;
+  width: 210px;
+  background-color:#FFEC85;
+   margin-top:-210px;
+  position: relative;
+  margin-left: 450px;
+  margin-right:30px;
   opacity: 0.7; 
 } 
 
  .circle_image4{
     border-radius: 50%; 
-    height: 250px;
-    width: 250px;
+    height: 290px;
+    width: 260px;
     background-image: url("image4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    margin-left:180px;
-    margin-top:-120px;
+    margin-left:140px;
+    margin-top:-100px;
    position: relative;
     
     
 }
 
 .circle_last{
-    height: 110px;
+    height: 120px;
     width: 110px;
     background-color:  #fad14b;
     border-radius: 50%;
     opacity: 0.7;
-    margin-left:390px;
-    margin-top:-100px;
+    margin-left:340px;
+    margin-top:-105px;
    
   } 
+
+  h3{
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 2px;
+    font-size:12px;
+    text-align: right;
+    position: relative;
+    padding-right:15px;
+   
+}
