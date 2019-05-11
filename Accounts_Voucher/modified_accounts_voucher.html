@@ -1,0 +1,936 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+  <title>Modified Accounts Voucher</title>
+
+  <link href="app.css" rel="stylesheet">
+
+  <link href="bootstrap.css" rel="stylesheet">
+
+  <link href="floating-labels.css" rel="stylesheet">
+
+<style>
+body{
+    background: #fff;
+    /* font-size: 14px;
+    font-weight: 300; */
+}
+
+ .border-bottom {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #dee2e6 !important;
+} 
+
+ .custom-control-input:checked~.custom-control-label:before {
+
+        color:#fff;
+    background-color: #05668D;
+    border-color:  #9BC4CB;
+    /* color: #fff;
+    border-color: #2196f3;
+    background-color:#3f51b5; */
+}
+
+.btn-primary
+ {
+         color:#fff;
+         background-color: #05668D;
+         border-color: #05668D;
+    
+} 
+.btn-primary:hover {
+  
+       
+         background-color: #064789;
+         border-color: #064789;
+ 
+}
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0 #05668D;
+}
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color:  #05668D;
+    color: #fff;
+}
+.table-bordered tr,
+.table-bordered thead {
+   border: 1px solid #dee2e6  ;
+}
+.table-bordered thead th{
+
+    background-color:  #05668D;
+    color:#fff;
+
+}
+.table-bordered td {
+   border: 0;
+}
+.font-weight-bolder {
+    font-weight: 1000;
+}
+.table-responsive {
+        /* display: block;
+        width: 100%; */
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch
+    }
+
+
+
+
+
+</style>	
+</head>
+
+<body>
+
+  <div class="container">
+      
+                <form class="p-2 mb-2 text-dark" style="background-color:#CFEBDF;">
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                    <label class="form-label">Location code</label>
+                                       <select class="form-control select2" data-toggle="select2">
+                                                <optgroup label="Alaskan">
+                                                <option value="AK">Kolkata</option>
+                                                <option value="HI">Hawaii</option>
+                                                </optgroup>
+                                                <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                                </optgroup>
+                                                <optgroup label="Mountain Time Zone">
+                                                <option value="AZ">Arizona</option>
+                                                <option value="CO">Colorado</option>
+                                                <option value="ID">Idaho</option>
+                                                <option value="MT">Montana</option>
+                                                <option value="NE">Nebraska</option>
+                                                <option value="NM">New Mexico</option>
+                                                <option value="ND">North Dakota</option>
+                                                <option value="UT">Utah</option>
+                                                <option value="WY">Wyoming</option>
+                                                </optgroup>
+                                                <optgroup label="Central Time Zone">
+                                                <option value="AL">Alabama</option>
+                                                <option value="AR">Arkansas</option>
+                                                <option value="IL">Illinois</option>
+                                                <option value="IA">Iowa</option>
+                                                <option value="KS">Kansas</option>
+                                                <option value="KY">Kentucky</option>
+                                                <option value="LA">Louisiana</option>
+                                                <option value="MN">Minnesota</option>
+                                                <option value="MS">Mississippi</option>
+                                                <option value="MO">Missouri</option>
+                                                <option value="OK">Oklahoma</option>
+                                                <option value="SD">South Dakota</option>
+                                                <option value="TX">Texas</option>
+                                                <option value="TN">Tennessee</option>
+                                                <option value="WI">Wisconsin</option>
+                                                </optgroup>
+                                                <optgroup label="Eastern Time Zone">
+                                                <option value="CT">Connecticut</option>
+                                                <option value="DE">Delaware</option>
+                                                <option value="FL">Florida</option>
+                                                <option value="GA">Georgia</option>
+                                                <option value="IN">Indiana</option>
+                                                <option value="ME">Maine</option>
+                                                <option value="MD">Maryland</option>
+                                                <option value="MA">Massachusetts</option>
+                                                <option value="MI">Michigan</option>
+                                                <option value="NH">New Hampshire</option>
+                                                <option value="NJ">New Jersey</option>
+                                                <option value="NY">New York</option>
+                                                <option value="NC">North Carolina</option>
+                                                <option value="OH">Ohio</option>
+                                                <option value="PA">Pennsylvania</option>
+                                                <option value="RI">Rhode Island</option>
+                                                <option value="SC">South Carolina</option>
+                                                <option value="VT">Vermont</option>
+                                                <option value="VA">Virginia</option>
+                                                <option value="WV">West Virginia</option>
+                                                </optgroup>
+                                                </select>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                        <label class="form-label">Project code</label>
+                                        <select class="form-control select2" data-toggle="select2">
+                                                        <optgroup label="Alaskan">
+                                                        <option value="AK">084</option>
+                                                        <option value="HI">Hawaii</option>
+                                                        </optgroup>
+                                                        <optgroup label="Pacific Time Zone">
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        <optgroup label="Mountain Time Zone">
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="ID">Idaho</option>
+                                                        <option value="MT">Montana</option>
+                                                        <option value="NE">Nebraska</option>
+                                                        <option value="NM">New Mexico</option>
+                                                        <option value="ND">North Dakota</option>
+                                                        <option value="UT">Utah</option>
+                                                        <option value="WY">Wyoming</option>
+                                                        </optgroup>
+                                                        <optgroup label="Central Time Zone">
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="AR">Arkansas</option>
+                                                        <option value="IL">Illinois</option>
+                                                        <option value="IA">Iowa</option>
+                                                        <option value="KS">Kansas</option>
+                                                        <option value="KY">Kentucky</option>
+                                                        <option value="LA">Louisiana</option>
+                                                        <option value="MN">Minnesota</option>
+                                                        <option value="MS">Mississippi</option>
+                                                        <option value="MO">Missouri</option>
+                                                        <option value="OK">Oklahoma</option>
+                                                        <option value="SD">South Dakota</option>
+                                                        <option value="TX">Texas</option>
+                                                        <option value="TN">Tennessee</option>
+                                                        <option value="WI">Wisconsin</option>
+                                                        </optgroup>
+                                                        <optgroup label="Eastern Time Zone">
+                                                        <option value="CT">Connecticut</option>
+                                                        <option value="DE">Delaware</option>
+                                                        <option value="FL">Florida</option>
+                                                        <option value="GA">Georgia</option>
+                                                        <option value="IN">Indiana</option>
+                                                        <option value="ME">Maine</option>
+                                                        <option value="MD">Maryland</option>
+                                                        <option value="MA">Massachusetts</option>
+                                                        <option value="MI">Michigan</option>
+                                                        <option value="NH">New Hampshire</option>
+                                                        <option value="NJ">New Jersey</option>
+                                                        <option value="NY">New York</option>
+                                                        <option value="NC">North Carolina</option>
+                                                        <option value="OH">Ohio</option>
+                                                        <option value="PA">Pennsylvania</option>
+                                                        <option value="RI">Rhode Island</option>
+                                                        <option value="SC">South Carolina</option>
+                                                        <option value="VT">Vermont</option>
+                                                        <option value="VA">Virginia</option>
+                                                        <option value="WV">West Virginia</option>
+                                                        </optgroup>
+                                                        </select>
+
+                                    </div>
+                                    <div class="col-md-2">
+                                            <label class="form-label">CB code</label>
+                                                            <select class="form-control select2" data-toggle="select2">
+                                                        <optgroup label="Alaskan">
+                                                        <option value="AK">00123</option>
+                                                        <option value="HI">Hawaii</option>
+                                                        </optgroup>
+                                                        <optgroup label="Pacific Time Zone">
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        <optgroup label="Mountain Time Zone">
+                                                        <option value="AZ">Arizona</option>
+                                                        <option value="CO">Colorado</option>
+                                                        <option value="ID">Idaho</option>
+                                                        <option value="MT">Montana</option>
+                                                        <option value="NE">Nebraska</option>
+                                                        <option value="NM">New Mexico</option>
+                                                        <option value="ND">North Dakota</option>
+                                                        <option value="UT">Utah</option>
+                                                        <option value="WY">Wyoming</option>
+                                                        </optgroup>
+                                                        <optgroup label="Central Time Zone">
+                                                        <option value="AL">Alabama</option>
+                                                        <option value="AR">Arkansas</option>
+                                                        <option value="IL">Illinois</option>
+                                                        <option value="IA">Iowa</option>
+                                                        <option value="KS">Kansas</option>
+                                                        <option value="KY">Kentucky</option>
+                                                        <option value="LA">Louisiana</option>
+                                                        <option value="MN">Minnesota</option>
+                                                        <option value="MS">Mississippi</option>
+                                                        <option value="MO">Missouri</option>
+                                                        <option value="OK">Oklahoma</option>
+                                                        <option value="SD">South Dakota</option>
+                                                        <option value="TX">Texas</option>
+                                                        <option value="TN">Tennessee</option>
+                                                        <option value="WI">Wisconsin</option>
+                                                        </optgroup>
+                                                        <optgroup label="Eastern Time Zone">
+                                                        <option value="CT">Connecticut</option>
+                                                        <option value="DE">Delaware</option>
+                                                        <option value="FL">Florida</option>
+                                                        <option value="GA">Georgia</option>
+                                                        <option value="IN">Indiana</option>
+                                                        <option value="ME">Maine</option>
+                                                        <option value="MD">Maryland</option>
+                                                        <option value="MA">Massachusetts</option>
+                                                        <option value="MI">Michigan</option>
+                                                        <option value="NH">New Hampshire</option>
+                                                        <option value="NJ">New Jersey</option>
+                                                        <option value="NY">New York</option>
+                                                        <option value="NC">North Carolina</option>
+                                                        <option value="OH">Ohio</option>
+                                                        <option value="PA">Pennsylvania</option>
+                                                        <option value="RI">Rhode Island</option>
+                                                        <option value="SC">South Carolina</option>
+                                                        <option value="VT">Vermont</option>
+                                                        <option value="VA">Virginia</option>
+                                                        <option value="WV">West Virginia</option>
+                                                        </optgroup>
+                                                        </select>
+        
+                                            
+                                        </div>
+                                        <div class="col-md-2 offset-md-2">
+                                                <label class="form-label">Voucher No</label>
+                                                <input type="text" class="form-control" id="VrNo">
+                                            </div>
+                                            
+                                            <div class="col-md-2">
+                                                    
+                                                    <label class="form-lable">Voucher date</label>
+                                                    <input class="form-control" type="text" id="datesingle" data-mask="date" placeholder="MM/DD/YYYY"/>
+                                                  </div>
+
+                        </div>
+                 </form>
+        
+        
+      <!-- inline radio buttons -->
+
+      <form class="mb-2">
+
+        <div class="form-row ml-2">
+              
+              <div class="offset-3 col-md-2">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="AccVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display();">
+                            <label class="custom-control-label font-weight-bolder" for="AccVoucher">Accounts voucher</label>
+                    </div>                  
+                    
+            </div>
+                 
+        
+            <div class="col-md-2">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="MatVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display();">
+                            <label class="custom-control-label font-weight-bolder" for="MatVoucher">Material voucher</label>
+                    </div>
+            </div>
+        
+           
+            <div class="col-md-2">
+                    <div class="custom-control custom-radio">
+                            <input type="radio" id="MecVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display();">
+                            <label class="custom-control-label font-weight-bolder" for="MecVoucher">Mechanical voucher</label>
+                    </div>
+            </div>
+          
+        </div>
+    </form>
+   
+
+      <!-- end of inline radio buttons -->
+
+      <!-- display form when accounts voucher is selected -->
+  
+<div id="ifAVCheck" style="visibility:hidden">
+<div class="card">
+         <div class="card-header text-white" style="background-color: #05668D ;">
+                <div class="row no-gutters">
+                        <div class="col-md-2">SRL No.<span id="srl_no">1</span></div>
+                        <div class="offset-7 col-md-3">
+                                <div class="form-inline">
+                                        <!-- <div class="form-group"> -->
+                                        <label>Party Balance &nbsp;</label>
+                                        <input  class="form-control w-50" name="party balance">
+                                        <!-- </div> -->
+
+                                </div>
+                        </div>
+                </div>
+        </div>
+
+    <div class="card-body">
+     
+                <form id="AccVoucherForm">
+
+                        <!-- <div class="form-group"> -->
+                                    <div class="form-row no-gutters">
+                                          <div class="col-md-2">
+                                                  <div class="form-label-group">
+                                                          <input class="border-bottom" placeholder="A/C code" list="SelectedAccountcode" id="Account_code">
+                                                          <label for="inputAcc">A/C code</label>
+                                                          <datalist id="SelectedAccountcode">
+                                                              <option value="one"></option>
+                                                              <option value="two"></option>
+                                                              <option value="three"></option>
+                                                              <option value="four"></option>
+                                                              <option value="five"></option>
+                                                          </datalist>
+                                                  </div>
+                                          </div>
+              
+                                      
+                                          <div class="col-md-2">
+                                              <div class="form-label-group">
+                                                      <input class="border-bottom" placeholder="Party code" list="SelectedMachinecode" id="Party_code" >
+                                                      <label for="inputPCode">Party code</label>
+                        
+                                              </div>
+                                          </div>
+              
+              
+                                      <div class="col-md-4">
+                                          <div class="form-label-group">
+                                                  <div class="form-label-group">
+                                                      <input class="border-bottom" placeholder="Narration" id="Narration">
+                                                        <label for="inputAccN">Narration</label>
+                                                  </div>               
+                                          </div>
+                                      </div>    
+                                      
+              
+              
+                                      <div class="col-md-2">
+                                                <div class="form-label-group">
+                                                                <input class="border-bottom" type="text" data-mask="currency" placeholder="Amount" id="Amount">
+                                                                <label for="inputAmt">Amount</label>
+                                                </div>
+                                                     
+                                        </div>
+
+                                        <div class="col-md-1">
+                                                <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Debitf" name="Amount" class="custom-control-input" data-toggle="modal" data-target="#Modal">
+                                                        <label class="custom-control-label" for="Debitf">Debit</label>
+                                                </div>
+                                                 <div class="custom-control custom-radio custom-control-inline">
+                                                        <input type="radio" id="Creditf" name="Amount" class="custom-control-input">
+                                                         <label class="custom-control-label" for="Creditf">Credit</label>
+                                                </div>
+                                                             
+                                        </div>
+
+                   
+                                 </div>
+                         <!-- </div> -->
+                            
+                           <!-- end of first group -->
+
+                         <!-- <div class="form-group"> -->
+                            <div class="form-row no-gutters">
+                                      <div class="col-md-2">
+                                              <div class="form-label-group">
+                                                     <input class="border-bottom" placeholder="Chq/DD no" type="text" data-mask="taxid" id="Cheque_no">
+                                                      <label for="inputChqNo">Chq/DD no</label>                    
+                                              </div>
+                                      </div>   
+                          
+                                      <div class="col-md-2">
+                                              <div class="form-label-group"> 
+                                                      <input class="border-bottom" type="text" data-mask="date" id="Cheque_date" placeholder="MM/DD/YYYY" />
+                                                      <label for="inputChqDt">Chq date</label>
+                                              </div>
+                                        </div>   
+                                
+                                        <div class="col-md-2">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Bill no" type="text" data-mask="taxid" id="Bill_no">
+                                                         <label for="inputBillNo">Bill no</label>                    
+                                                 </div>
+                                        </div>  
+                                        
+                                        
+                                        <div class="col-md-2">
+                                                <div class="form-label-group"> 
+                                                        <input class="border-bottom" type="text" data-mask="date" id="Bill_date" placeholder="MM/DD/YYYY" />
+                                                        <label for="inputBillDate">Bill date</label>
+                                                 </div>
+                                         </div>
+
+                                         <div class="col-md-2">
+                                                        <div class="form-label-group">
+                                                                <div class="form-label-group">
+                                                                        <input class="border-bottom" placeholder="OH func"  id="OH_func">
+                                                                        <label for="inputOHFunc">OH func</label>
+                                                                </div>               
+                                                        </div>
+                                                </div>    
+
+
+                                                <div class="col-md-2">
+                                                                <div class="form-label-group">
+                                                                         <div class="form-label-group">
+                                                                                 <input class="border-bottom" placeholder="OH unit"  id="OH_unit">
+                                                                                 <label for="inputOHunit">OH unit</label>
+                                                                        </div>               
+                                                                </div>
+                                                        </div>  
+
+                                </div>      
+                         <!-- </div> -->
+                  
+                         <!-- end of second group -->
+                        
+                      <!-- <div class="form-group"> -->
+                          <div class="form-row no-gutters">  
+
+                                        <div class="col-md-2">
+                                                 <div class="form-label-group">
+                                                         <div class="form-label-group">
+                                                                <input class="border-bottom" placeholder="Bank"  id="Bank">
+                                                                <label for="inputBank">Bank</label>
+                                                               </div>               
+                                                        </div>
+                                               </div> 
+       
+                                               <div class="col-md-2">
+                                                       <div class="form-label-group">
+                                                                <input class="border-bottom" placeholder="TDS no" type="text" data-mask="taxid" id="TDS_no">
+                                                               <label for="TDSNo">TDS no</label>                    
+                                                       </div>
+                                               </div>   
+
+              
+                                       <div class="col-md-2">
+                                          <div class="form-label-group">
+                                                  <input class="border-bottom" placeholder="Asset id" list="hosting-plan" id="Asset_id">
+                                                  <label for="inputAssetId">Asset id</label>
+                                                  <datalist name="SelectedAssetId">
+                                                          <option value="one"></option>
+                                                          <option value="two"></option>
+                                                          <option value="three"></option>
+                                                          <option value="four"></option>
+                                                          <option value="five"></option>
+                                                  </datalist>
+                                          </div>
+                                      </div>
+              
+                                      <div class="col-md-2">
+                                              <div class="form-label-group">
+                                                     <input class="border-bottom" placeholder="MRN No" type="text" data-mask="taxid"  id="MRN_no">
+                                                      <label for="MRNNo">MRN no</label>                    
+                                              </div>
+                                      </div>  
+
+                                      <div class="col-md-2">
+                                                <div class="form-label-group"> 
+                                                        <input class="border-bottom" type="text" data-mask="date" id="MRN_date" placeholder="MM/DD/YYYY" />
+                                                        <label for="inputMRNdt">MRN date</label>
+                                                </div>
+                                         </div>  
+                                         
+                                         <div class="col-md-2">
+                                                 <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="PO no" type="text" data-mask="taxid"  id="PO_no">
+                                                        <label for="PONo">PO no</label>                    
+                                                </div>
+                                        </div>   
+                                    
+
+                             
+                      </div>
+                  <!-- </div> -->
+              
+                      
+              <!-- end of third group -->
+              
+              <!-- <div class="form-group">  -->
+                  <div class="form-row no-gutters">        
+                                <div class="col-md-2">
+                                        <div class="form-label-group"> 
+                                                <input class="border-bottom" type="text" data-mask="date" id="PO_date" placeholder="MM/DD/YYYY" />
+                                                 <label for="inputPOdt">PO date</label>
+                                         </div>
+                                </div>   
+                                <div class="col-md-2">
+                                         <div class="form-label-group">
+                                                 <input class="border-bottom" placeholder="Bill srl no" type="text" data-mask="taxid"  id="Bill_srl_no">
+                                                <label for="inputBillSNo">Bill srl no</label>                    
+                                        </div>
+                                </div> 
+
+                               
+                                <div class="col-md-2"> 
+                                                <div class="custom-control custom-checkbox mt-2">
+                                                        <input type="checkbox" class="custom-control-input" id="Audited">
+                                                        <label class="custom-control-label" for="Audited">Audited</label>
+                                                </div>
+                                        </div> 
+                                        
+                                        <div class="col-md-2">
+                                                
+                                                <div class="custom-control custom-checkbox mt-2">
+                                                        <input type="checkbox" class="custom-control-input" id="Registered">
+                                                        <label class="custom-control-label" for="Registered">Registered</label>
+                                                </div>
+                                        </div> 
+
+                                        
+                        <div class="col-md-2 offset-2">
+
+                         <input type="button" value="Add Voucher" id="AddVoucherBtn" class="btn btn-primary mt-1" />
+                         </div>              
+                </div>
+              <!-- </div>  -->
+              <!-- end of fourth group -->  
+              
+                <!-- table that displays form elements -->
+                <br>
+         <div id="ifsubmit" style="visibility:hidden">
+        
+                
+                        <div class="table-responsive">
+               
+                                        <table class="table table-sm table-bordered" id="display_table">
+                                            <thead>
+                                                        <tr>
+                                                                <th style="width:5%">Srl no</th>
+                                                                <th style="width:6%">A/C code</th>
+                                                                <th style="width:6%">Party code</th>
+                                                                <th style="width:20%">Narration</th>
+                                                                <th style="width:11%">Chq/DD no</th>
+                                                                <th style="width:5%">Chq date</th>
+                                                                <th style="width:15%" >Bill no</th>
+                                                                <th style="width:5%">Bill date</th>
+                                                                <th style="width:9%">GST no</th>
+                                                                <th style="width:6%">Debit</th>
+                                                                <th style="width:6%">Credit</th>
+                                                                       
+                                                                
+                                                        </tr>
+                                                </thead>
+            
+                                        </table>
+                        </div>
+                                               
+        </div>
+              <!-- Modal for GST details-->
+                <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalCenterTitle">GST details &amp; Expense for party</h5>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                                    <div class="form-inline">
+                                                    <!-- <div class="form-group"> -->
+                                                    <label>GST No &nbsp;</label>
+                                                    <input  class="form-control w-25" id="GST_no">
+                                                    <!-- </div> -->
+                            
+                                    </div>
+                                    <br>
+                            
+                        <form>
+
+                                    <div class="form-row no-gutters">
+                                            <div class="col-md-3">
+                                                    <div class="form-label-group">
+                                                            <input class="border-bottom" id="Exp_code">
+                                                            <label for="inputExp">Exp party</label>
+                                                    </div>
+                                            </div> 
+                                        
+                                            <div class="col-md-3">
+                                                            <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" id= "GST_paid">
+                                                                    <label class="custom-control-label" for="GST_paid" style="font-size:12px;">GST paid</label>
+                                                            </div>
+                                                    </div>  
+                                                    
+                                                    <div class="col-md-3">
+                                                                    <div class="custom-control custom-checkbox">
+                                                                        <input type="checkbox" class="custom-control-input" id="Eligible">
+                                                                        <label class="custom-control-label" for="Eligible" style="font-size:12px;">Eligible</label>
+                                                                </div>
+                                                        </div>  
+                                        
+                    
+                                                    <div class="col-md-3">
+                                                            <div class="custom-control custom-checkbox">
+                                                                    <input type="checkbox" class="custom-control-input" id="Reverse_charges">
+                                                                    <label class="custom-control-label" for="Reverse_charges" style="font-size:12px;">Reverse charges</label>
+                                                            </div>
+                                                    </div>   
+
+                                    </div>
+                                    <br>
+                                    <div class="form-row no-gutters">
+                                                    <div class="col-md-3">
+                                                                    <div class="form-label-group">
+                                                                            <input class="border-bottom" id="Machine_code">
+                                                                            <label for="inputMcode">M/C code</label>
+                                                                    </div>
+                                                            </div> 
+                                                
+                                                                            
+                                                            <div class="col-md-3">
+                                                                    <div class="form-label-group">
+                                                                            <input class="border-bottom" list="SelectedPerson" id="Signed_by">
+                                                                            <label for="inputSignedBy">Signed by</label>
+                                                                            <datalist id="SelectedPerson">
+                                                                                    <option value="one"></option>
+                                                                                    <option value="two"></option>
+                                                                                    <option value="three"></option>
+                                                                                    <option value="four"></option>
+                                                                                    <option value="five"></option>
+                                                                            </datalist>
+                                                                    </div>
+                                                            </div>
+                                                                                            
+                                                            <div class="col-md-3">
+                                                                    <div class="form-label-group">
+                                                                            <input class="border-bottom" id="State_code">
+                                                                            <label for="inputStCode">State cd</label>
+                                                                    </div>
+                                                            </div> 
+
+
+                                            <div class="col-md-3">
+                                                    <div class="form-label-group">
+                                                            <input class="border-bottom" id="Composite">
+                                                            <label for="inputComposite">Composite</label>
+                                                    </div>
+                                            </div> 
+                                                                        
+                                                    
+                                
+                                        
+                                    </div>      
+                                            
+                        </form>
+                            
+                            </div>
+
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Back</button>
+                        <!-- <button type="button" class="btn btn-primary">Done</button> -->
+                        </div>
+
+                    </div>
+                    </div>
+                </div>
+
+             <!-- end of modal -->
+
+        </form>
+    </div>
+ </div>
+
+</div>
+
+<!-- end of card -->
+
+
+
+</div>
+<!-- end of container -->
+
+<script src="https://spark.bootlab.io/js/app.js"></script>
+
+<!-- rule defined for input data mask -->
+
+<script src="app.js"></script>
+
+<script src="jquery.maskedinput.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //-initialize the javascript
+    App.init();
+    App.masks();
+  });
+</script>
+
+<script>
+                $(function() {
+                                // Select2
+                                $(".select2").each(function() {
+                                        $(this)
+                                                .wrap("<div class=\"position-relative\"></div>")
+                                                .select2({
+                                                        // placeholder: "Select value",
+                                                        dropdownParent: $(this).parent()
+                                });
+              })
+        
+              //calendar
+              $("input[id=\"datesingle\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                $("input[id=\"Cheque_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"Bill_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"PO_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"MRN_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+        
+            });
+        
+</script>
+
+
+
+
+<!-- for displaying accounts voucher form -->
+
+<script>
+function form_display() {
+    if (document.getElementById('AccVoucher').checked) {
+        document.getElementById('ifAVCheck').style.visibility = 'visible';
+
+        //for displaying the form elements in table
+
+        $('#AddVoucherBtn').click(function () {
+       
+          document.getElementById('ifsubmit').style.visibility = 'visible';
+
+
+          //srl no
+
+          $('#srl_no').html(function(i, val) { return val*1+1 });
+
+            //amount : debit or credit
+
+            if (document.getElementById('Debitf').checked) {
+                       document.getElementById("Debitf").value = $('#Amount').val();
+                       document.getElementById("Creditf").value = "0000.00";
+
+               }
+               if (document.getElementById('Creditf').checked) {
+                       document.getElementById("Creditf").value = $('#Amount').val();
+
+                       document.getElementById("Debitf").value = "0000.00";
+
+               }
+
+            //adding multiple rows into the table
+                var table = document.getElementById("display_table");
+
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+
+
+                var cell1 = row.insertCell(0);
+                var element1 = document.createElement("td");
+                element1.innerHTML = rowCount;
+                cell1.appendChild(element1);
+
+                var cell2 = row.insertCell(1);
+                var element2 = document.createElement("td");
+                element2.innerHTML =  $('#Account_code').val();
+                cell2.appendChild(element2);
+
+                var cell3 = row.insertCell(2);
+                var element3 = document.createElement("td");
+                element3.innerHTML =  $('#Party_code').val();
+                cell3.appendChild(element3);
+
+                var cell4 = row.insertCell(3);
+                var element4 = document.createElement("td");
+                element4.innerHTML =  $('#Narration').val();
+                cell4.appendChild(element4);
+
+                var cell5 = row.insertCell(4);
+                var element5 = document.createElement("td");
+                element5.innerHTML =  $('#Cheque_no').val();
+                cell5.appendChild(element5);
+
+                var cell6 = row.insertCell(5);
+                var element6 = document.createElement("td");
+                element6.innerHTML =  $('#Cheque_date').val();
+                cell6.appendChild(element6);
+
+                var cell7 = row.insertCell(6);
+                var element7 = document.createElement("td");
+                element7.innerHTML =  $('#Bill_no').val();
+                cell7.appendChild(element7);
+
+                var cell8 = row.insertCell(7);
+                var element8 = document.createElement("td");
+                element8.innerHTML =  $('#Bill_date').val();
+                cell8.appendChild(element8);
+
+                var cell9 = row.insertCell(8);
+                var element9 = document.createElement("td");
+                element9.innerHTML =  $('#GST_no').val();
+                cell9.appendChild(element9);
+
+                var cell10 = row.insertCell(9);
+                var element10 = document.createElement("td");
+                element10.innerHTML =  $('#Debitf').val();
+                cell10.appendChild(element10);
+
+
+                var cell11 = row.insertCell(10);
+                var element11 = document.createElement("td");
+                element11.innerHTML = $('#Creditf').val();
+                cell11.appendChild(element11);
+
+              
+
+
+                //form reset after adding voucher
+
+             document.getElementById("AccVoucherForm").reset();
+
+
+          
+
+                
+                });
+
+                //end addvoucher click
+
+
+               
+    }
+    else {
+            
+                document.getElementById('ifAVCheck').style.visibility = 'hidden';
+                document.getElementById('ifsubmit').style.visibility = 'hidden';
+        }
+
+}
+</script>
+        
+</body>
+</html>
