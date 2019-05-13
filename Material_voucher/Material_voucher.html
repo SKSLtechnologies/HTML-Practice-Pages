@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>Material Voucher</title>
+
+        <link href="app.css" rel="stylesheet">
+        <link href="bootstrap.css" rel="stylesheet">
+        <link href="floating-labels.css" rel="stylesheet">
+  
+<style>
+body{
+    background: #fff;
+}
+
+ .border-bottom {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #dee2e6 !important;
+} 
+
+ .custom-control-input:checked~.custom-control-label:before {
+
+    color:#fff;
+    background-color: #05668D;
+    border-color:  #9BC4CB;
+}
+
+.btn-primary
+ {
+         color:#fff;
+         background-color: #05668D;
+         border-color: #05668D;
+    
+} 
+.btn-primary:hover {
+  
+       
+         background-color: #064789;
+         border-color: #064789;
+ 
+}
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0 #05668D;
+}
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color:  #05668D;
+    color: #fff;
+}
+.custom-select{
+
+        border-radius: 0;
+}
+.input-group,
+.input-group-sm,
+.input-group-prepend{
+   
+    border-radius: 0;
+}
+
+.table-bordered tr,
+.table-bordered thead {
+   border: 1px solid #dee2e6  ;
+}
+.table-bordered thead th{
+
+    background-color:  #05668D;
+    color:#fff;
+
+}
+.table-bordered td {
+   border: 0;
+}
+.font-weight-bolder {
+    font-weight: 1000;
+}
+
+
+
+
+
+</style>	
+</head>
+
+<body>
+
+  <div class="container">
+      
+                <form class="p-2 mb-2 text-dark" style="background-color:#CFEBDF;">
+                        <div class="form-row">
+                            <div class="col-md-2">
+                                    <label class="form-label">Location code</label>
+                                       <select class="form-control select2" data-toggle="select2">
+                                                <optgroup label="Alaskan">
+                                                <option value="AK">kolkata</option>
+                                                <option value="HI">Bilaspur</option>
+                                                </optgroup>
+                                                <optgroup label="Pacific Time Zone">
+                                                <option value="CA">California</option>
+                                                <option value="NV">Nevada</option>
+                                                <option value="OR">Oregon</option>
+                                                <option value="WA">Washington</option>
+                                                </optgroup> 
+                                                </select>
+
+                                </div>
+
+                                <div class="col-md-2">
+                                        <label class="form-label">Project code</label>
+                                        <select class="form-control select2" data-toggle="select2">
+                                                        <optgroup label="Alaskan">
+                                                        <option value="AK">084</option>
+                                                        <option value="HI">011</option>
+                                                        </optgroup>
+                                                        <optgroup label="Pacific Time Zone">
+                                                        <option value="CA">California</option>
+                                                        <option value="NV">Nevada</option>
+                                                        <option value="OR">Oregon</option>
+                                                        <option value="WA">Washington</option>
+                                                        </optgroup>
+                                                        </select>
+
+                                    </div>
+                                  
+                                        <div class="col-md-2 offset-md-4">
+                                                <label class="form-label">Voucher No</label>
+                                                <input type="text" class="form-control" id="VrNo">
+                                            </div>
+                                            
+                                            <div class="col-md-2">
+                                                    
+                                                    <label class="form-lable">Voucher date</label>
+                                                    <input class="form-control" type="text" id="datesingle" data-mask="date" placeholder="MM/DD/YYYY"/>
+                                                  </div>
+
+                        </div>
+                 </form>
+        
+        
+      <!-- inline radio buttons -->
+
+                <form class="mb-2">
+
+                        <div class="form-row ml-2">
+                        
+                        <div class="offset-3 col-md-2">
+                                <div class="custom-control custom-radio">
+                                        <input type="radio" id="AccVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display1();">
+                                        <label class="custom-control-label font-weight-bolder" for="AccVoucher">Accounts voucher</label>
+                                </div>                  
+                                
+                        </div>
+                                
+                        
+                        <div class="col-md-2">
+                                <div class="custom-control custom-radio">
+                                        <input type="radio" id="MatVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display2();">
+                                        <label class="custom-control-label font-weight-bolder" for="MatVoucher">Material voucher</label>
+                                </div>
+                        </div>
+                        
+                        
+                        <div class="col-md-2">
+                                <div class="custom-control custom-radio">
+                                        <input type="radio" id="MecVoucher" name="customRadio" class="custom-control-input" onclick="javascript:form_display3();">
+                                        <label class="custom-control-label font-weight-bolder" for="MecVoucher">Mechanical voucher</label>
+                                </div>
+                        </div>
+                        
+                        </div>
+                </form>
+                
+
+      <!-- end of inline radio buttons -->
+
+      <!-- display form when material voucher is selected -->
+  
+                <div id="ifMatVCheck" style="visibility:hidden">
+                <div class="card">
+                        <div class="card-header text-white" style="background-color: #05668D ;">
+                                <div class="row no-gutters">
+                                        <div class="col-md-3">SRL No.<span id="srl_no">1</span> &nbsp; MATERIAL RECEIPT ENTRY</div>
+                                        <div class="col-md-2 offset-4">
+                                                        
+                                                
+                                                
+                                                        <div class="input-group input-group-sm">
+                                                                <div class="input-group-prepend">
+                                                                        <label class="input-group-text" for="inputGroupSelect01">Voucher code</label>
+                                                                </div>
+                                                                <select class="custom-select custom-select-sm" id="inputGroupSelect01">
+                                                                         <option selected>Select</option>
+                                                                        <option value="1">RA</option>
+                                                                        <option value="2">RO</option>
+                                                                        <option value="3">RC</option>
+                                                                        <option value="4">RP</option>
+                                                                </select>
+                                                        </div>
+                        
+
+                                                <!-- <div class="form-inline">
+                                                        <label>Voucher code &nbsp;</label>
+                                                        <select class="custom-select custom-select-sm">
+                                                                        <option selected>Select</option>
+                                                                        <option value="1">RA</option>
+                                                                        <option value="2">RO</option>
+                                                                        <option value="3">RC</option>
+                                                                        <option value="4">RP</option>
+                                                        </select>
+                                                
+                                                </div> -->
+                                        </div> 
+                                         &nbsp;
+                                        <div class="col-md-2">
+                                                         
+                                                        <div class="input-group input-group-sm">
+                                                                <div class="input-group-prepend">
+                                                                        <label class="input-group-text" for="inputGroupSelect01">Party code</label>
+                                                                </div>
+                                                                <select class="custom-select custom-select-sm" id="inputGroupSelect01">
+                                                                        <option selected>Select</option>
+                                                                        <option value="1">One</option>
+                                                                        <option value="2">Two</option>
+                                                                        <option value="3">Three</option>
+                                                                </select>
+                                                        </div>
+                                                        
+                                                        <!-- <div class="form-inline">
+                                                                <label>Party code &nbsp;</label>
+                                                                <select class="custom-select custom-select-sm">
+                                                                                <option selected>Select</option>
+                                                                                <option value="1">One</option>
+                                                                                <option value="2">Two</option>
+                                                                                <option value="3">Three</option>
+                                                                </select>
+                                                        </div> -->
+                                        </div>
+                                </div>
+                        </div>
+
+                <div class="card-body">
+                
+                                <form id="MatVoucherForm">
+                                               
+                                        <div class="form-row no-gutters">
+                                                <div class="col-md-2">
+                                                        <div class="form-label-group">
+                                                                        <div class="form-label-group">
+                                                                        <input class="border-bottom" placeholder="Item code" id="Item_code">
+                                                                                <label for="Item_code">Item code</label>
+                                                                        </div>               
+                                                        </div>
+                                                        
+                                                </div>
+                        
+                                                
+                                                <div class="col-md-4">
+                                                        <div class="form-label-group">
+                                                                <div class="form-label-group">
+                                                                <input class="border-bottom" placeholder="Narration" id="Narration">
+                                                                        <label for="Narration">Narration</label>
+                                                                </div>               
+                                                        </div>
+                                                </div>    
+
+                                                <div class="col-md-2">
+                                                                <div class="form-label-group">
+                                                                        <div class="form-label-group">
+                                                                                <input class="border-bottom" placeholder="Unit code"  id="Unit_code">
+                                                                                <label for="Unit_code">Unit code</label>
+                                                                        </div>               
+                                                                </div>
+                                                        </div>    
+
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="Quantity"  id="Quantity">
+                                                                                        <label for="Quantity">Quantity</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div>    
+
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="Chal rate"  id="Chal_rate">
+                                                                                        <label for="Chal_rate">Chal rate</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div>    
+                                                
+                                                
+                                
+                                                </div>
+                                        
+                                        <!-- end of first group -->
+
+                                        <!-- <div class="form-group"> -->
+                                        <div class="form-row no-gutters">
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="Land value"  id="Land_val">
+                                                                                        <label for="Land_val">Land value</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div>    
+                                        
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="Taxes"  id="Taxes">
+                                                                                        <label for="Taxes">Taxes</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div>    
+                                                
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                        <input class="border-bottom" type="text" data-mask="currency" placeholder="Trans Amt" id="Trans_amt">
+                                                                                        <label for="Trans_amt">Trans Amt</label>
+                                                                        </div>
+                                                                        
+                                                                </div>
+                                                        
+                                                        
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                        <input class="border-bottom" type="text" data-mask="currency" placeholder="Other Amt" id="Other_amt">
+                                                                                        <label for="Other_amt">Other  Amt</label>
+                                                                        </div>
+                                                                                
+                                                        </div>
+
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                        <input class="border-bottom" type="text" data-mask="currency" placeholder="GST Amt" id="GST_amt">
+                                                                                        <label for="GST_amt">GST Amt</label>
+                                                                        </div>
+                                                                                
+                                                        </div>
+
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                        <input class="border-bottom" type="text" data-mask="currency" placeholder="I-GST Amt" id="IGST_amt">
+                                                                                        <label for="IGST_amt">I-GST Amt</label>
+                                                                        </div>
+                                                                                
+                                                        </div>
+                        
+                                                </div>      
+                                        <!-- </div> -->
+                                
+                                        <!-- end of second group -->
+                                        <div class="form-row no-gutters">
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="GST Id"  id="GST_id">
+                                                                                        <label for="GST_id">GST Id</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div>    
+
+                                                        <div class="col-md-2">
+                                                                        <div class="form-label-group">
+                                                                                <div class="form-label-group">
+                                                                                        <input class="border-bottom" placeholder="GST state"  id="GST_state">
+                                                                                        <label for="GST_state">GST state</label>
+                                                                                </div>               
+                                                                        </div>
+                                                        </div> 
+
+                                                        <div class="col-md-2">
+                                                                <div class="input-group input-group-sm mt-2">
+                                                                        <div class="input-group-prepend">
+                                                                                <span class="input-group-text" >Total</span>
+                                                                        </div>
+                                                                        <input id="Total" class="form-control">
+                                                                </div>                   
+                                                        </div>
+                                                        
+                                                        <div class="col-md-2 offset-4">
+
+                                                                        <input type="button" value="Add Voucher" id="AddVoucherBtn" class="btn btn-primary mt-1" />
+                                                                        </div>              
+                                                        </div>
+                                                        
+
+                                        </div>
+
+                                        <!-- end of third group -->
+
+                                        <br>
+
+                                        <!-- table that displays form elements -->
+        
+                                <div id="Mat_table" style="visibility:hidden">
+                        
+                                
+                                        <div class="table-responsive">
+                                
+                                                        <table class="table table-sm table-bordered" id="display_table">
+                                                                <thead>
+                                                                        <tr>
+                                                                        <th style="width:5%">Srl no</th>
+                                                                        <th style="width:6%">Item code</th>
+                                                                        <th style="width:20%">Narration</th>
+                                                                        <th style="width:6%">Quantity</th>
+                                                                        <th style="width:6%">Chal rate</th>
+                                                                        <th style="width:6%">Land value</th>
+                                                                        <th style="width:6%">Total</th>
+                                                                        <th style="width:6%">GST Amount</th>
+                                                                        
+        
+                                                                                <!-- <th style="width:6%">Action</th> -->            
+                                                                                
+                                                                        </tr>
+                                                                </thead>
+                                
+                                                        </table>
+                                        </div>
+                                                                
+                        </div>
+
+
+
+
+
+
+
+                                
+                        </form>
+                </div>
+                </div>
+
+                </div>
+
+        <!-- end of card -->
+
+
+
+</div>
+<!-- end of container -->
+
+<script src="https://spark.bootlab.io/js/app.js"></script>
+
+<!-- rule defined for input data mask -->
+
+<script src="app.js"></script>
+
+<script src="jquery.maskedinput.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    //-initialize the javascript
+    App.init();
+    App.masks();
+  });
+</script>
+
+<script>
+                $(function() {
+                                // Select2
+                                $(".select2").each(function() {
+                                        $(this)
+                                                .wrap("<div class=\"position-relative\"></div>")
+                                                .select2({
+                                                        // placeholder: "Select value",
+                                                        dropdownParent: $(this).parent()
+                                });
+              })
+        
+              //calendar
+              $("input[id=\"datesingle\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                $("input[id=\"Cheque_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"Bill_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"PO_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"MRN_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+        
+            });
+        
+</script>
+
+
+
+<script>
+function form_display2() {
+        if (document.getElementById('MatVoucher').checked) {
+        document.getElementById('ifMatVCheck').style.visibility = 'visible';
+
+          //for displaying the form elements in table
+
+          $('#AddVoucherBtn').click(function () {
+       
+       document.getElementById('Mat_table').style.visibility = 'visible';
+
+
+       //srl no
+
+       $('#srl_no').html(function(i, val) { return val*1+1 });
+
+       document.getElementById("Land_val").value = $('#Quantity').val() * $('#Chal_rate').val();
+       var sum = parseInt($('#Taxes').val() ) 
+       sum = sum + parseInt($('#Land_val').val() ) 
+       document.getElementById("Total").value =  sum
+       
+       $('#Total').html(function() { return document.getElementById("Total").value });
+
+
+         //adding multiple rows into the table
+             var table = document.getElementById("display_table");
+
+             var rowCount = table.rows.length;
+             var row = table.insertRow(rowCount);
+
+
+             var cell1 = row.insertCell(0);
+             var element1 = document.createElement("td");
+             element1.innerHTML = rowCount;
+             cell1.appendChild(element1);
+
+             var cell2 = row.insertCell(1);
+             var element2 = document.createElement("td");
+             element2.innerHTML =  $('#Item_code').val();
+             cell2.appendChild(element2);
+
+             var cell3 = row.insertCell(2);
+             var element3 = document.createElement("td");
+             element3.innerHTML =  $('#Narration').val();
+             cell3.appendChild(element3);
+
+             var cell4 = row.insertCell(3);
+             var element4 = document.createElement("td");
+             element4.innerHTML =  $('#Quantity').val();
+             cell4.appendChild(element4);
+
+             var cell5 = row.insertCell(4);
+             var element5 = document.createElement("td");
+             element5.innerHTML =  $('#Chal_rate').val();
+             cell5.appendChild(element5);
+
+             var cell6 = row.insertCell(5);
+             var element6 = document.createElement("td");
+             element6.innerHTML =  $('#Land_val').val();
+             cell6.appendChild(element6);
+
+             var cell7 = row.insertCell(6);
+             var element7 = document.createElement("td");
+             element7.innerHTML =  $('#Total').val();
+             cell7.appendChild(element7);
+
+             var cell8 = row.insertCell(7);
+             var element8 = document.createElement("td");
+             element8.innerHTML =  $('#GST_amt').val();
+             cell8.appendChild(element8);
+
+            
+           
+
+             //form reset after adding voucher
+
+          document.getElementById("MatVoucherForm").reset();
+             
+             });
+
+             //end addvoucher click
+
+                
+        }
+        else {
+                document.getElementById('ifMatVCheck').style.visibility = 'hidden';
+                document.getElementById('Mat_table').style.visibility = 'hidden';
+
+        }
+
+}
+</script>
+
+
+        
+</body>
+</html>
