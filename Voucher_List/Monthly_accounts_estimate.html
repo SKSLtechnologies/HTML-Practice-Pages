@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+  <title>Monthly accounts estimate</title>
+
+  <link href="app.css" rel="stylesheet">
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="floating-labels.css" rel="stylesheet">
+
+
+  <!-- custom CSS -->
+<style>
+body{
+    background:#fff;
+}
+
+ .border-bottom {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #666 !important;
+} 
+
+ .custom-control-input:checked~.custom-control-label:before {
+
+        color:#fff;
+    background-color: #05668D;
+    border-color:  #9BC4CB;
+  
+}
+
+.btn-primary
+ {
+         color:#fff;
+         background-color: #05668D;
+         border-color: #05668D;
+    
+} 
+.btn-primary:hover {
+  
+       
+         background-color: #064789;
+         border-color: #064789;
+ 
+}
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0 #05668D;
+}
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color:  #05668D;
+    color: #fff;
+}
+
+.font-weight-bolder {
+    font-weight: 1000;
+}
+
+
+</style>	
+</head>
+
+<body>
+
+  <div class="container">
+        <div class="card">
+                <div class="card-header text-white" style="background-color: #05668D ;">
+                MONTHLY ACCOUNTS ESTIMATE     
+                </div>
+
+            <div class="card-body">
+            
+                        <form id="BillSerialForm">
+
+                                <div class="form-row justify-content-center no-gutters">
+
+                                        <div class="col-md-2">
+                                                <label class="form-label">Financial year</label>
+                                                    <select class="form-control select2" id="Fin_year" data-toggle="select2">
+                                                            <option value="0809">0809</option>
+                                                            <option value="0910">0910</option>
+                                                            <option value="1011">1011</option>
+                                                            <option value="1112">1112</option>
+                                                            <option value="1213">1213</option>
+                                                            <option value="1314">1314</option>
+                                                            <option value="1415">1415</option>
+                                                            <option value="1516">1516</option>
+                                                            <option value="1617">1617</option>
+                                                            <option value="1718">1718</option>
+                                                            <option value="1819">1819</option>
+                                                            <option value="1920">1920</option>
+                                                    </select>
+                    
+                                            </div>
+
+
+                                        <div class="col-md-2">
+                                                <label class="form-label">Location code</label>
+                                                    <select class="form-control select2" id="Location_code" data-toggle="select2">
+                                                            <option value="0011">Kolkata</option>
+                                                            <option value="0012">Jharkhand</option>
+                                                            <option value="0014">Durgapur</option>
+                                                            <option value="0021">New Delhi</option>
+                                                            <option value="0093">Nagpur</option>
+                                                            <option value="0095">Bilaspur</option>
+                                                    </select>
+                    
+                                            </div>
+                    
+                                            <div class="col-md-2">
+                                                <label class="form-label">Project code</label>
+                                                    <select class="form-control select2" id="Project_code" data-toggle="select2"> 
+                                                            <option value="47">47</option>
+                                                            <option value="84">84</option>
+                                                            <option value="161">161</option>
+                                                            <option value="165">165</option>
+                                                            <option value="168">168</option>
+                                                            <option value="169">169</option>     
+                                                    </select>
+                    
+                                            </div>
+
+
+                                             
+                                        
+                                </div>
+
+                                     <!-- end of first group -->
+
+                            
+                                <div class="form-row justify-content-center mt-2 no-gutters">
+
+
+                                    <div class="col-md-2">
+                                        <div class="form-label-group"> 
+                                                <input class="border-bottom" type="text" data-mask="date" id="Date_from" placeholder="MM/DD/YYYY" />
+                                                <label>From</label>
+                                        </div>
+                                </div>   
+
+                                  <div class="col-md-2">
+                                            <div class="form-label-group"> 
+                                                    <input class="border-bottom" type="text" data-mask="date" id="Date_to" placeholder="MM/DD/YYYY" />
+                                                    <label>To</label>
+                                            </div>
+                                    </div>
+
+
+
+                                       
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="PBSRL code" list="SelectedPBSRLcode" id="PBSRL_code">
+                                                        <label for="PBSRL_code">PBSRL code</label>
+                                                        <datalist id="SelectedPBSRLcode">
+                                                            <option value="one"></option>
+                                                            <option value="two"></option>
+                                                            <option value="three"></option>
+                                                            <option value="four"></option>
+                                                            <option value="five"></option>
+                                                        </datalist>
+                                                </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Estimate S/N" list="SelectedEstimate_SN" id="Estimate">
+                                                        <label for="Estimate">Estimate S/N</label>
+                                                        <datalist id="SelectedEstimate_SN">
+                                                            <option value="one"></option>
+                                                            <option value="two"></option>
+                                                            <option value="three"></option>
+                                                            <option value="four"></option>
+                                                            <option value="five"></option>
+                                                        </datalist>
+                                                </div>
+                                        </div>
+
+                                        <div class="col-md-2">
+
+                                            <input type="button" value="Click to search" id="SearchBtn" class="btn btn-primary" />
+                                          </div>     
+                                
+
+                                    
+                                </div>
+                    
+                                    
+                                <!-- end of second group -->
+   
+                  
+                        <!-- <div class="form-row mt-2 justify-content-center">
+                                <div class="col-md-3">
+
+                                        <input type="button" value="Click to search" id="SearchBtn" class="btn btn-primary ml-5" />
+                                </div>      
+
+
+                        </div> -->
+
+                          <!-- end of third group -->  
+                
+                </form>
+            </div>
+        </div>
+
+    
+</div>
+<!-- end of container -->
+
+
+<script src="https://spark.bootlab.io/js/app.js"></script>
+
+<!-- rule defined for input data mask -->
+<script src="app.js"></script>
+<script src="jquery.maskedinput.js"></script>
+
+<script>
+  $(document).ready(function(){
+    //-initialize the javascript
+    App.init();
+    App.masks();
+  });
+</script>
+
+<script>
+                $(function() {
+                                // Select2
+                        $(".select2").each(function() {
+                                $(this)
+                                        .wrap("<div class=\"position-relative\"></div>")
+                                        .select2({
+                                                // placeholder: "Select value",
+                                                dropdownParent: $(this).parent()
+                        });
+        })
+        
+              //calendar
+              $("input[id=\"datesingle\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+                  $("input[id=\"Date_from\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                $("input[id=\"Date_to\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                 
+            
+            });
+        
+</script>
+
+        
+</body>
+</html>

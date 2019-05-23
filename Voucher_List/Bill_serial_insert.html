@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	
+  <title>Bill serial insert</title>
+
+  <link href="app.css" rel="stylesheet">
+  <link href="bootstrap.css" rel="stylesheet">
+  <link href="floating-labels.css" rel="stylesheet">
+
+
+  <!-- custom CSS -->
+<style>
+body{
+    background:#fff;
+}
+
+ .border-bottom {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid #666 !important;
+} 
+
+ .custom-control-input:checked~.custom-control-label:before {
+
+        color:#fff;
+    background-color: #05668D;
+    border-color:  #9BC4CB;
+  
+}
+
+.btn-primary
+ {
+         color:#fff;
+         background-color: #05668D;
+         border-color: #05668D;
+    
+} 
+.btn-primary:hover {
+  
+       
+         background-color: #064789;
+         border-color: #064789;
+ 
+}
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0 #05668D;
+}
+.select2-container--bootstrap4 .select2-results__option--highlighted[aria-selected] {
+    background-color:  #05668D;
+    color: #fff;
+}
+.table-bordered tr,
+.table-bordered thead {
+   border: 1px solid #dee2e6  ;
+}
+.table-bordered thead th{
+
+    background-color:  #05668D;
+    color:#fff;
+
+}
+.table-bordered td {
+   border: 0;
+}
+.font-weight-bolder {
+    font-weight: 1000;
+}
+
+
+</style>	
+</head>
+
+<body>
+
+  <div class="container">
+      
+
+        
+        <div class="card">
+                <div class="card-header text-white" style="background-color: #05668D ;">
+                        <div class="row no-gutters">
+                                <div class="col-md-3">SRL No.<span id="srl_no">1</span> &nbsp; BILL SERIAL INSERT ENTRY</div>
+                        </div>
+                </div>
+
+            <div class="card-body">
+            
+                        <form id="BillSerialForm">
+
+                                <div class="form-row justify-content-center">
+
+                                        <div class="col-md-2">
+                                                <label class="form-label">Financial year</label>
+                                                    <select class="form-control select2" id="Fin_year" data-toggle="select2">
+                                                            <option value="0809">0809</option>
+                                                            <option value="0910">0910</option>
+                                                            <option value="1011">1011</option>
+                                                            <option value="1112">1112</option>
+                                                            <option value="1213">1213</option>
+                                                            <option value="1314">1314</option>
+                                                            <option value="1415">1415</option>
+                                                            <option value="1516">1516</option>
+                                                            <option value="1617">1617</option>
+                                                            <option value="1718">1718</option>
+                                                            <option value="1819">1819</option>
+                                                            <option value="1920">1920</option>
+                                                    </select>
+                    
+                                            </div>
+
+
+                                        <div class="col-md-2">
+                                                <label class="form-label">Location code</label>
+                                                    <select class="form-control select2" id="Location_code" data-toggle="select2">
+                                                            <option value="0011">Kolkata</option>
+                                                            <option value="0012">Jharkhand</option>
+                                                            <option value="0014">Durgapur</option>
+                                                            <option value="0021">New Delhi</option>
+                                                            <option value="0093">Nagpur</option>
+                                                            <option value="0095">Bilaspur</option>
+                                                    </select>
+                    
+                                            </div>
+                    
+                                            <div class="col-md-2">
+                                                <label class="form-label">Project code</label>
+                                                    <select class="form-control select2" id="Project_code" data-toggle="select2"> 
+                                                            <option value="47">47</option>
+                                                            <option value="84">84</option>
+                                                            <option value="161">161</option>
+                                                            <option value="165">165</option>
+                                                            <option value="168">168</option>
+                                                            <option value="169">169</option>     
+                                                    </select>
+                    
+                                            </div>
+
+
+                                             
+                                        
+                                </div>
+
+                                     <!-- end of first group -->
+
+                            
+                                <div class="form-row mt-2 ml-5">
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Last serial no" type="text" id="Last_srl_no" >
+                                                        <label for="Last_srl_no">Last serial no</label>                    
+                                                </div>
+                                        </div>
+
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Bill serial no" type="text" id="Bill_srl_no" onkeyup="sum();">
+                                                        <label for="Bill_srl_no">Bill serial no</label>                    
+                                                </div>
+                                        </div>           
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Party code" list="SelectedAccountcode" id="Party_code">
+                                                        <label for="Party_code">Party code</label>
+                                                        <datalist id="SelectedAccountcode">
+                                                            <option value="one"></option>
+                                                            <option value="two"></option>
+                                                            <option value="three"></option>
+                                                            <option value="four"></option>
+                                                            <option value="five"></option>
+                                                        </datalist>
+                                                </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Account code" list="SelectedAccountcode" id="Account_code">
+                                                        <label for="inputAcc">Account code</label>
+                                                        <datalist id="SelectedAccountcode">
+                                                            <option value="one"></option>
+                                                            <option value="two"></option>
+                                                            <option value="three"></option>
+                                                            <option value="four"></option>
+                                                            <option value="five"></option>
+                                                        </datalist>
+                                                </div>
+                                        </div>
+                                     
+                                       
+            
+                                    
+                                </div>
+                    
+                                    
+                                <!-- end of second group -->
+
+                                
+                                <div class="form-row ml-5">
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group"> 
+                                                        <input class="border-bottom" type="text" data-mask="date" id="Receipt_date" placeholder="MM/DD/YYYY" />
+                                                        <label for="inputChqDt">Receipt date</label>
+                                                </div>
+                                        </div>   
+
+
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                        <input class="border-bottom" placeholder="Bill no" type="text" id="Bill_no">
+                                                        <label for="inputBillNo">Bill no</label>                    
+                                                </div>
+                                        </div>  
+                                        
+                                        
+                                        <div class="col-md-3">
+                                                <div class="form-label-group"> 
+                                                        <input class="border-bottom" type="text" data-mask="date" id="Bill_date" placeholder="MM/DD/YYYY" />
+                                                        <label for="inputBillDate">Bill date</label>
+                                                </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                                <div class="form-label-group">
+                                                                <input class="border-bottom" type="text" data-mask="currency" placeholder="Bill amount" id="Bill_amount">
+                                                                <label for="Bill_amount">Bill amount</label>
+                                                </div>
+                                                    
+                                        </div>
+
+
+                                      
+                                 </div>      
+                            
+                        
+                                <!-- end of second group -->
+                                
+                    
+                    
+                        <div class="form-row ml-5">    
+                                <div class="col-md-3">
+                                        <div class="form-label-group">
+                                                <div class="form-label-group">
+                                                    <input class="border-bottom" placeholder="Narration" id="Narration">
+                                                        <label for="inputAccN">Narration</label>
+                                                </div>               
+                                        </div>
+                                    </div>    
+
+                                <div class="col-md-3">
+                                        <div class="form-label-group">
+                                                <input class="border-bottom" placeholder="Purchase order no" type="text" id="Purchase_order">
+                                                <label for="Purchase_order">Purchase order no</label>                    
+                                        </div>
+                                </div>      
+                                
+                                
+                                <div class="col-md-3">
+                                        <div class="form-label-group"> 
+                                                <input class="border-bottom" type="text" data-mask="date" id="Purchase_date" placeholder="MM/DD/YYYY" />
+                                                <label for="Purchase_date">Purchase order date</label>
+                                        </div>
+                                </div>
+                            
+    
+                                        
+                                <div class="col-md-3">
+                                        <div class="form-label-group">
+                                                        <input class="border-bottom" type="text" data-mask="currency" placeholder="Purchase Order amount" id="Purchase_amount">
+                                                        <label for="Purchase_amount">Purchase order amount</label>
+                                        </div>
+                                            
+                                </div>
+                                    
+        
+                        </div>
+                    <!-- end of third group -->  
+
+                        <div class="form-row mt-2 ml-5">
+                                <div class="col-md-3 offset-9">
+
+                                        <input type="button" value="Add Voucher" id="AddVoucherBtn" class="btn btn-primary mt-1" />
+                                </div>      
+
+
+                        </div>
+
+
+
+
+
+                    
+                        <!-- table that displays form elements -->
+                    
+                <div id="Bill_table" style="display:none">
+                
+                                <div class="table-responsive">
+                    
+                                                <table class="table table-sm table-bordered mt-2" id="Bill_display_table">
+                                                    <thead>
+                                                                <tr>
+                                                                        <th style="width:5%">Srl</th>
+                                                                        <th style="width:5%">Account code</th>
+                                                                        <th style="width:15%" >Bill no</th>
+                                                                        <th style="width:5%">Bill date</th>
+                                                                        <th style="width:20%">Narration</th>
+                                                                        <th style="width:5%">Bill amount</th>
+                                                                        <th style="width:15%">Bill serial no</th>
+                                                                                    
+                                                                </tr>
+                                                        </thead>
+                    
+                                                </table>
+                                </div>                              
+                </div>
+                </form>
+            </div>
+        </div>
+
+    
+</div>
+<!-- end of container -->
+
+
+<script src="https://spark.bootlab.io/js/app.js"></script>
+
+<!-- rule defined for input data mask -->
+<script src="app.js"></script>
+<script src="jquery.maskedinput.js"></script>
+
+<script>
+  $(document).ready(function(){
+    //-initialize the javascript
+    App.init();
+    App.masks();
+  });
+</script>
+
+<script>
+                $(function() {
+                                // Select2
+                        $(".select2").each(function() {
+                                $(this)
+                                        .wrap("<div class=\"position-relative\"></div>")
+                                        .select2({
+                                                // placeholder: "Select value",
+                                                dropdownParent: $(this).parent()
+                        });
+        })
+        
+              //calendar
+              $("input[id=\"datesingle\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+                  $("input[id=\"Bill_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                $("input[id=\"Receipt_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+        
+                  $("input[id=\"Purchase_date\"]").daterangepicker({
+                    singleDatePicker: true,
+                    showDropdowns: true
+                  });
+            
+            });
+        
+</script>
+
+
+
+<script>
+    //one key
+    function sum() {
+        document.getElementById("Bill_srl_no").value = $('#Location_code').val()+'/'+$('#Project_code').val()+'/'+$('#Fin_year').val()+'/'+$('#Last_srl_no').val()
+           
+        }
+
+
+
+
+
+
+
+
+
+        //for displaying the form elements in table
+
+        $('#AddVoucherBtn').click(function () {
+       
+          document.getElementById('Bill_table').style.display = 'block';
+
+          //srl no
+
+          $('#srl_no').html(function(i, val) { return val*1+1 });
+
+            // document.getElementById("Bill_srl_no").value = $('#Location_code').val()+'/'+$('#Project_code').val()+'/'+$('#Fin_year').val()+'/'+$('#Last_srl_no').val()
+                      
+            //adding multiple rows into the accounts table
+                var table = document.getElementById("Bill_display_table");
+
+                var rowCount = table.rows.length;
+                var row = table.insertRow(rowCount);
+
+
+                var cell1 = row.insertCell(0);
+                var element1 = document.createElement("td");
+                element1.innerHTML = rowCount;
+                cell1.appendChild(element1);
+
+                var cell2 = row.insertCell(1);
+                var element2 = document.createElement("td");
+                element2.innerHTML =  $('#Account_code').val();
+                cell2.appendChild(element2);
+
+                var cell3 = row.insertCell(2);
+                var element3 = document.createElement("td");
+                element3.innerHTML =  $('#Bill_no').val();
+                cell3.appendChild(element3);
+
+                var cell4 = row.insertCell(3);
+                var element4 = document.createElement("td");
+                element4.innerHTML =  $('#Bill_date').val();
+                cell4.appendChild(element4);
+
+                var cell5 = row.insertCell(4);
+                var element5 = document.createElement("td");
+                element5.innerHTML =  $('#Narration').val();
+                cell5.appendChild(element5);
+
+                var cell6 = row.insertCell(5);
+                var element6 = document.createElement("td");
+                element6.innerHTML =  $('#Bill_amount').val();
+                cell6.appendChild(element6);
+
+                var cell7 = row.insertCell(6);
+                var element7 = document.createElement("td");
+                element7.innerHTML =  $('#Bill_srl_no').val();
+                cell7.appendChild(element7);
+                
+                //form reset after adding voucher
+
+             document.getElementById("BillSerialForm").reset();
+                
+                });
+
+                //end addvoucher click
+               
+
+</script>
+        
+</body>
+</html>
