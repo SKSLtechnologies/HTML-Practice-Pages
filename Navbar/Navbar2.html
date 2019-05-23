@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ERP SKSL</title>
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+     <!-- Favicon -->
+   <link rel="shortcut icon" href="assets/img/favicon.ico">
+ <!-- Vendor Styles including: Font Icons, Plugins, etc.-->
+
+    <link rel="stylesheet" media="screen" href="vendor.min.css">
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="theme2.css">
+    <link href="fontawesome-free-5.8.1-web/css/all.min.css" rel="stylesheet">
+  
+   
+    <!-- Modernizr-->
+    <script src="modernizr.min.js"></script>
+
+
+<!-- custom css -->
+
+<style>
+
+
+ .bg-dark {
+    background-color:#05668D !important
+}
+.navbar-simple-ghost .navbar-nav>.nav-item>.nav-link {
+    color: whitesmoke;
+}
+.navbar-simple-ghost .navbar-nav>.nav-item:hover>.nav-link,
+.navbar-simple-ghost .navbar-nav>.nav-item.active>.nav-link {
+    color: rgba(255,255,255,0.65);
+}
+
+
+</style>
+
+  </head>
+  
+  <body>
+    
+
+    <!-- Navbar: Simple Ghost-->
+    <header class="navbar-wrapper navbar-boxed navbar-simple-ghost">
+      <div class="container-fluid">
+        <div class="d-table-cell align-middle pr-md-3"><a class="navbar-brand mr-1" href="menu.html" style="color:whitesmoke;">SKSL</a></div>
+        <div class="d-table-cell w-100 align-middle pl-md-3">
+          <div class="navbar justify-content-end justify-content-lg-between">
+            <!-- Search-->
+            <form class="search-box" method="get">
+              <input type="text" id="site-search" placeholder="Type A or C to see suggestions"><span class="search-close"><i class="fe-icon-x"></i></span>
+            </form>
+            <!-- Main Menu-->
+            <ul class="navbar-nav d-none d-lg-block">
+              <!-- Home-->
+              <li class="nav-item"><a class="nav-link" href="Navbar2.html"><i class="fa fa-home"></i>&nbsp;Home</a>
+              </li>
+
+               <!-- Finance-->
+              <li class="nav-item mega-dropdown-toggle"><a class="nav-link"><i class="fa fa-university"></i>&nbsp; Finance</a>
+                <div class="dropdown-menu mega-dropdown">
+                  <div class="d-flex">
+                    <div class="column">
+                      <div class="widget widget-custom-menu">
+                        <ul>
+                          <li class="dropdown-header font-weight-medium text-warning border-warning text-uppercase pl-0" ><i class="fa fa-calculator"></i>&nbsp;&nbsp;Accounts</li>
+                          <li><a class="collapsed" href="#trans-submenu" data-toggle="collapse" aria-expanded="false" id="accordion-menu">Transaction</a></li>
+                            <div id="trans-submenu" class="collapse" data-parent="#accordion-menu">
+                                <ul>
+                                  <li><a  href="#">Accounts Voucher Entry</a></li>
+                                  <li><a href="#">Party Bill Serial Entry</a></li>
+                                  <li><a href="#">Monthly Accounts Estimate</a></li>
+                                  <li><a href="#">CPM Cash</a></li>
+                                </ul>    
+                            </div>          
+                          
+                          <li><a  href="#">Compulsory reports</a></li>
+                          <li><a href="#">MIS/Director's Reports</a></li>
+                          <li><a href="#">Master List</a></li>
+                          <li><a href="#">Utility</a></li>
+                          
+                        </ul>
+                            
+                      </div>
+
+
+                      <!-- for transaction -->
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+                    <div class="column">
+                      <div class="widget widget-custom-menu">
+                        <ul>
+                          <li class="dropdown-header font-weight-medium text-info border-info text-uppercase pl-0"><i class="fa fa-cubes"></i>&nbsp;&nbsp;Inventory</li>
+                          <li><a href="#">Inventory Transaction Entry</a></li>
+                          <li><a href="#">Purchasing Process</a></li>
+                          <li><a href="#">Reports</a></li>
+                          <li><a href="#">Bank Material</a></li>
+                          <li><a href="#">Master List</a></li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+
+
+
+                    <div class="column">
+                      <div class="widget widget-custom-menu">
+                        <ul>
+                          <li class="dropdown-header font-weight-medium text-success border-success    text-uppercase pl-0"><i class="fas fa-tools"></i>&nbsp;&nbsp;Mechanical</li>
+                          <li><a href="#">Mechanical Data Transactions</a></li>
+                          <li><a href="#">Mechanical Master</a></li>
+                          <li><a href="#">Mechanical Reports</a></li>
+                          <li><a href="#">Master List</a></li>
+                          <li><a href="#">Utility</a></li>
+                         
+                        </ul>
+                      </div>
+                    </div>
+
+
+
+                    <div class="column">
+                      <div class="widget widget-custom-menu">
+                        <ul>
+                          <li class="dropdown-header font-weight-medium text-accent border-accent text-uppercase pl-0"><i class="fas fa-coins"></i>&nbsp;&nbsp;Client Billing</li>
+                          <li><a href="#">Client Billing &amp; Costing</a></li>
+                          <li><a href="#">Reports</a></li>
+                          <li><a href="#">Utility</a></li>
+                          
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Engineering-->
+              
+              <li class="nav-item dropdown-toggle"><a class="nav-link"><i class="fa fa-cogs" aria-hidden="true"></i>&nbsp;Engineering</a>
+        
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header font-weight-medium text-info border-info text-uppercase pl-0">&nbsp;&nbsp;<i class="fas fa-money-bill-wave"></i>&nbsp;&nbsp;Project Costing</li>
+                  <li class="dropdown-item"><a href="#">Tender Rate Annually</a></li>
+                  <li class="dropdown-item"><a href="#">Project Reports</a></li>
+                  <li class="dropdown-item"><a href="#">Drawaings &amp; Activity</a></li>
+                  <li class="dropdown-item"><a href="#">Profile Settings</a></li>
+                 
+                </ul>
+              </li>
+
+
+              <!-- HR and admin-->
+
+              <li class="nav-item dropdown-toggle"><a class="nav-link"><i class="fa fa-users" aria-hidden="true"></i>&nbsp;HR &amp; Admin</a>
+        
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header font-weight-medium text-warning border-warning text-uppercase pl-0">&nbsp;&nbsp;<i class="fas fa-hand-holding-usd"></i>&nbsp;&nbsp;Payroll</li>
+                  <li class="dropdown-item"><a href="#">HR &amp; Payroll Master </a></li>
+                  <li class="dropdown-item"><a href="#">HR &amp; Payroll Transaction</a></li>
+                  <li class="dropdown-item"><a href="#">HR &amp; Payroll Reports</a></li>
+                  <li class="dropdown-item"><a href="#">Master Reports</a></li>
+                  <li class="dropdown-item"><a href="#">Utility</a></li>
+                 
+                </ul>
+              </li>
+              <!-- Labor-->
+              <li class="nav-item dropdown-toggle"><a class="nav-link"><i class="fas fa-fist-raised"></i>&nbsp;Labor</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a href="#">Labor Transaction Entry</a></li>
+                  <li class="dropdown-item"><a href="#">Labour Bills</a></li>
+                  <li class="dropdown-item"><a href="#">Reports</a></li>
+                  <li class="dropdown-item"><a href="#">Master List</a></li>
+                  <li class="dropdown-item"><a href="#">Utility</a></li>
+                 
+                </ul>
+              </li>
+              <!-- Master-->
+              <li class="nav-item dropdown-toggle"><a class="nav-link"><i class="fa fa-list" aria-hidden="true"></i>&nbsp;Master</a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a href="#">Primary Master</a></li>
+                      <li class="dropdown-item"><a href="#">Account Master</a></li>
+                      <li class="dropdown-item"><a href="#">Inventory Master</a></li>
+                      <li class="dropdown-item"><a href="#">PO Master</a></li>
+                      <li class="dropdown-item"><a href="#">Labor Master</a></li>
+                      <li class="dropdown-item"><a href="#">Access Control</a></li>
+                      <li class="dropdown-item"><a href="#">User Control</a></li>
+                      
+                  
+                </ul>
+              </li>
+              <!-- Utility-->
+
+              <li class="nav-item dropdown-toggle"><a class="nav-link"><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Utility</a>
+                <ul class="dropdown-menu">
+                  
+                      <li class="dropdown-item"><a href="#">Access Control</a></li>
+                      <li class="dropdown-item"><a href="#">User Control</a></li>
+                      
+                  
+                </ul>
+              </li>
+            
+
+
+
+
+            </ul>
+            <!-- <div>
+              <ul class="navbar-buttons d-inline-block align-middle">
+                <li class="d-block d-lg-none"><a href="#mobile-menu" data-toggle="offcanvas"><i class="fe-icon-menu"></i></a></li>
+                <li><a href="#" data-toggle="search"><i class="fe-icon-search"></i></a></li>
+              </ul><a class="btn btn-gradient ml-3 d-none d-xl-inline-block" href="https://themes.getbootstrap.com/product/createx-multipurpose-template-ui-kit/" target="_blank">Buy Now</a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Page Content-->
+  
+    <div class="bg-dark" style="height: 70px;"></div>
+    
+    
+   
+    <!-- <div class="site-backdrop"></div> -->
+    <!-- JavaScript (jQuery) libraries, plugins and custom scripts-->
+
+
+    <!-- <script>
+    $('.collapse').collapse();
+    </script> -->
+    <script src="vendor.min.js"></script>
+    <script src="theme.min.js"></script>
+
+    <!--bootstrap js-->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
